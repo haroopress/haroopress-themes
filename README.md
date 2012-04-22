@@ -1,4 +1,0 @@
-themes
-======
-
-theme for haroopress
