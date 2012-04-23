@@ -1,14 +1,11 @@
-<!-- Masthead (blueprinty thing)
-================================================== -->
-<header class="jumbotron masthead" id="overview">
+<header class="overview">
     <div class="inner">
     </div>
 </header>
 
-
 <div class="container">
     <div class="row">
-        <div class="span3 _side">
+        <div class="span3">
             <%- partial('plugins/intro', config) %>
             <%- partial('plugins/category-menu', { categories: categories }) %>
             <%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors }) %>
@@ -20,12 +17,12 @@
             %>
             <div class="row">
                 <div class="span9">
-                    <div class="well bg">
+                    <div class="well">
                         <div class="page-header">
                             <h1><a href="/post/<%= article._file %>"><%= article.head.title %></a></h1>
                             <span class="pull-right"><%= article.head.published %></span>
                         </div>
-                        <div class="pull-right" style="padding: 0 10px 10px 10px;">
+                        <div class="pull-right">
                             <ul class="thumbnails">
                                 <li class="thumbnail">
                                     <a>
@@ -34,7 +31,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="markdown">
+                        <div>
                             <%- article.html %>
                         </div>
                         <hr/>
