@@ -11,6 +11,8 @@
         <div class="span3">
             <%- partial('plugins/category-menu', { categories: categories }) %>
             <%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors }) %>
+            <%- partial('plugins/github-repo', config.plugins.github) %>
+            <%- partial('plugins/favorites', favorites) %>
         </div>
         <div class="span9">
             <div class="well bg">
