@@ -58,6 +58,19 @@ hr {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
 
+.markdown .pull-left {
+    margin: 0 8px 8px 0;
+}
+
+.markdown .pull-right {
+    margin: 0 0 8px 8px;
+}
+
+.markdown blockquote p {
+    font-style: italic;
+    font-size: 1em;
+}
+
 .left30 {
     margin-left: 30px;
 }
