@@ -15,8 +15,9 @@
             <%- partial('plugins/github-repo', config.plugins.github) %>
         </div>
         <div class="span9">
-            <% for(var id in archives) {
-                var article = archives[id];
+            <% //for(var id in archives) {
+                for(var id = 0; dates.serialize.length; id++) {
+                var article = dates.serialize[id];
             %>
             <div class="row">
                 <div class="span9">
