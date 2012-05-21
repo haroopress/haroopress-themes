@@ -1,10 +1,7 @@
-<!-- Masthead (blueprinty thing)
-================================================== -->
 <header class="jumbotron masthead" id="overview">
     <div class="inner">
     </div>
 </header>
-
 
 <div class="container">
     <div class="row">
@@ -13,6 +10,8 @@
             <%- partial('plugins/category-menu', { categories: categories }) %>
             <%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors }) %>
             <%- partial('plugins/github-repo', config.plugins.github) %>
+            <%- partial('plugins/favorites', favorites) %>
+            <%- partial('plugins/weather', config.plugins) %>
         </div>
         <div class="span9">
             <% //for(var id in archives) {
@@ -37,7 +36,7 @@
                             </ul>
                         </div>
                         <div class="markdown">
-                            <%- article.html %>
+                            <%- article.cuthtml %>
                         </div>
                         <hr/>
                         <a class="pull-right" href="/post/<%= article._file %>#disqus_thread" data-disqus-identifier="<%= id %>"></a>
