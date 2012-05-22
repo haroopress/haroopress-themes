@@ -1,21 +1,21 @@
 /**
  * layout
  */
-.page-main, .page-archive, .page-archives, 
-.page-author, .page-authors, .page-category, 
+.page-main, .page-archive, .page-archives,
+.page-author, .page-authors, .page-category,
 .page-categories, .page-page {
-	margin-top: 70px;
+    margin-top: 70px;
 }
 
 /**
  * article body
  */
 *, p {
-	font-family: AppleSDGothicNeo-Medium;
+    font-family: AppleSDGothicNeo-Medium;
 }
 
 .markdown p {
-	line-height: 1.7em;
+    line-height: 1.7em;
 }
 
 /**
@@ -64,4 +64,3 @@
 .contributors a {
     font-size: 1.1em;
 }
-	
