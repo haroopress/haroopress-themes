@@ -18,6 +18,14 @@
     line-height: 1.7em;
 }
 
+.markdown .pull-left {
+    margin-right: 10px;
+}
+
+.markdown .pull-right {
+    margin-left: 10px;
+}
+
 /**
  * categories
  */
