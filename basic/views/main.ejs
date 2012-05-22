@@ -1,9 +1,4 @@
-<header class="overview">
-    <div class="inner">
-    </div>
-</header>
-
-<div class="container">
+<div class="container page-main">
     <div class="row">
         <div class="span3">
             <%- partial('plugins/intro', config) %>
@@ -14,37 +9,31 @@
             <%- partial('plugins/weather', config.plugins) %>
         </div>
         <div class="span9">
-            <% //for(var id in archives) {
-                for(var id = 0; id < dates.serialize.length; id++) {
-                var article = dates.serialize[id];
+            <%
+                var article, limit = config.pagenate < dates.serialize.length ? config.pagenate : dates.serialize.length;
+                for(var id = 0; id < limit; id++) {
+                    article = dates.serialize[id];
             %>
-            <div class="row">
-                <div class="span9">
-                    <div class="well">
-                        <% if(article.head.important) { %><div class="pull-right bookmark"></div><% } %>
-                        <div class="page-header">
-                            <h1><a href="/post/<%= article._file %>"><%= article.head.title %></a></h1>
-                            <span class="pull-right"><%= article.head.published %></span>
-                        </div>
-                        <div class="pull-right" style="padding: 0 10px 10px 10px;">
-                            <ul class="thumbnails">
-                                <li class="thumbnail">
-                                    <a>
-                                        <img src="<%= article.author._gravatar %>" width="128"/>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <%- article.cuthtml %>
-                        </div>
-                        <hr/>
-                        <a class="pull-right" href="/post/<%= article._file %>#disqus_thread" data-disqus-identifier="<%= id %>"></a>
-                        <p>
-                            <a href="/post/<%= article._file %>" class="btn btn-info">Read more...</a>
-                        </p>
-                    </div>
+            <div class="well">
+                <div class="page-header">
+                    <h1><a href="/post/<%= article._file %>"><%= article.head.title %></a></h1>
+                    <span class="pull-right"><%= article.head.published %></span>
                 </div>
+                <div class="pull-right">
+                    <ul class="thumbnails">
+                        <li class="thumbnail">
+                            <img src="<%= article.author._gravatar %>"/>
+                        </li>
+                    </ul>
+                </div>
+                <div class="markdown">
+                    <%- article.html %>
+                </div>
+                <hr/>
+                <a class="pull-right" href="/post/<%= article._file %>#disqus_thread" data-disqus-identifier="<%= id %>"></a>
+                <p>
+                    <a href="/post/<%= article._file %>" class="btn btn-info">Read more...</a>
+                </p>
             </div>
             <% } %>
         </div>
