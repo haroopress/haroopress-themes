@@ -1,7 +1,7 @@
-<% if( config.plugins.google.googlePlus ) { %>
+                    <% if( config.display ) { %>
                         <div class="pull-right">
                             <!-- Place this tag where you want the +1 button to render -->
-                            <g:plusone href="<%= config.meta.siteUrl %>/post/<%= archive._file %>" size="<%= config.plugins.google.googlePlusSize %>"></g:plusone>
+                            <g:plusone href="/post/<%= archive._file %>" size="<%= config.googlePlusSize %>"></g:plusone>
 
                             <!-- Place this render call where appropriate -->
                             <script type="text/javascript">
@@ -12,4 +12,4 @@
                               })();
                             </script>
                         </div>
-<% } %>
+                    <% } %>

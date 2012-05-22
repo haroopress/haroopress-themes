@@ -53,7 +53,7 @@
                         </div>
 
                         <%- partial('plugins/facebook', config.plugins.facebook) %>
-                        <%- partial('plugins/google-plus', { config: config, archive: archive }) %>
+                        <%- partial('plugins/google-plus', { config: config.plugins.google, archive: archive }) %>
                         <%- partial('plugins/twitter', { config: config, archive: archive }) %>
 
                         <div class="markdown">
