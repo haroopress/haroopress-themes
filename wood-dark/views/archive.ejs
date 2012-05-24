@@ -61,11 +61,7 @@
                         </div>
                         <hr />
                         <%- partial('plugins/prev-next', { prev: archive.prev, next: archive.next }) %>
-                        <div class="row">
-                            <div class="span8">
-                                <%- partial('plugins/disqus', config.plugins.disqus) %>
-                            </div>
-                        </div>
+                        <%- partial('plugins/disqus', config.plugins.disqus) %>
                     </div>
                 </div>
             </div>
