@@ -1,45 +1,129 @@
+<header class="intro-head">
+    <div class="inner">
+        <div class="container">
+            <h1>HAROOPRESS [하루프레스]</h1>
+
+            <p class="lead">
+                웹 서버와 데이터베이스가 필요 없는 초 스피드 간편, 편리한 정적 페이지 기반의 블로그 엔진! <br>
+                다양한 테마, 플러그인, 마크다운 포맷, 데이터 변환 유틸(옥토프레스, 워드프레스 등)<br>
+            </p>
+
+            <p><strong>haroopress? :</strong> 하루프레스는 사용자 여러분의 피드백과 후원과 기부를 기다립니다.</p>
+        </div>
+        <!-- /container -->
+        <ul class="quick-links">
+            <li>
+                <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=rhiokim&repo=haroopress&type=watch&count=true"
+      allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+            </li>
+            <li>
+                <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=rhiokim&repo=haroopress&type=fork&count=true"
+      allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
+            </li>
+            <li>
+                <a href="https://twitter.com/#!/haroopress" class="twitter-follow-button" data-show-count="true">Follow @haroopress</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </li>
+            <li>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-text="자바스크립트 해커들을 위한 노드 기반의 정적 페이지 블로그 하루프레스" data-url="http://haroopress.github.com" data-via="haroopress">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </li>
+        </ul>
+    </div>
+</header>
+
 <div class="container page-main">
     <div class="row">
-        <div class="span3">
-            <%- partial('plugins/intro', config) %>
-            <%- partial('plugins/category-menu', { categories: categories }) %>
-            <%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors }) %>
-            <%- partial('plugins/github-repo', config.plugins.github) %>
-            <%- partial('plugins/favorites', favorites) %>
-            <%- partial('plugins/weather', config.plugins) %>
+        <div class="span4">
+            <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
+            <h2>No! 웹 서버, No! 데이터베이스</h2>
+            <p>Like you, we love building awesome products on the web. We love it so much, we decided to help people just like us do it easier, better, and faster. Bootstrap is built for you.</p>
         </div>
-        <div class="span9">
-            <%
-                var article, limit = config.pagenate < dates.serialize.length ? config.pagenate : dates.serialize.length;
-                for(var id = 0; id < limit; id++) {
-                    article = dates.serialize[id];
-            %>
-            <div class="well">
-                <% if(article.head.important) { %><div class="pull-right bookmark"></div><% } %>
-                <div class="page-header">
-                    <h1><a href="/post/<%= article._file %>"><%= article.head.title %></a></h1>
-                    <span class="pull-right"><%= article.head.published %></span>
-                </div>
-                <div class="pull-right">
-                    <ul class="thumbnails">
-                        <li class="thumbnail">
-                            <img src="<%= article.author._gravatar %>"/>
-                        </li>
-                    </ul>
-                </div>
-                <div class="markdown">
-                    <%- article.cuthtml %>
-                </div>
-                <hr/>
-                <a class="pull-right" href="/post/<%= article._file %>#disqus_thread" data-disqus-identifier="<%= id %>"></a>
-                <p>
-                    <a href="/post/<%= article._file %>" class="btn btn-info">Read more...</a>
-                </p>
-            </div>
-            <% } %>
+        <div class="span4">
+            <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_079_podium.png">-->
+            <h2>간편하고 빠른 정적 블로그 엔진</h2>
+            <p>Bootstrap is designed to help people of all skill levels—designer or developer, huge nerd or early beginner. Use it as a complete kit or use to start something more complex.</p>
+        </div>
+        <div class="span4">
+            <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_163_iphone.png">-->
+            <h2>감각적인 개발자용 테마들</h2>
+            <p>Originally built with only modern browsers in mind, Bootstrap has evolved to include support for all major browsers (even IE7!) and, with Bootstrap 2, tablets and smartphones, too.</p>
         </div>
     </div>
-</div><!-- /container -->
+    <div class="row">
+        <div class="span4">
+            <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
+            <h2>개발자스러운 마크다운 포맷지원</h2>
+            <p>Like you, we love building awesome products on the web. We love it so much, we decided to help people just like us do it easier, better, and faster. Bootstrap is built for you.</p>
+        </div>
+        <div class="span4">
+            <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_079_podium.png">-->
+            <h2>다양한 플러그인</h2>
+            <p>Bootstrap is designed to help people of all skill levels—designer or developer, huge nerd or early beginner. Use it as a complete kit or use to start something more complex.</p>
+        </div>
+        <div class="span4">
+            <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_163_iphone.png">-->
+            <h2>개발자들에게만 편리한 CLI</h2>
+            <p>Originally built with only modern browsers in mind, Bootstrap has evolved to include support for all major browsers (even IE7!) and, with Bootstrap 2, tablets and smartphones, too.</p>
+        </div>
+    </div>
 
-<%- partial('plugins/disqus-comment-count', config.plugins.disqus) %>
-<%- partial('plugins/weather', config.plugins) %>
+    <hr class="soften">
+    <div class="twitter"></div>
+
+    <hr class="soften">
+    <div class="marketing">
+        <h1>개발자스러운 감각적인 테마들</h1>
+        <p class="marketing-byline">개발자스럽지 않는 테마는 여기에 나열하지 않았습니다. 너무 이쁘거나 너무 번잡한 테마는 IE6 에서만 지원합니다.</p>
+        <ul class="thumbnails example-sites">
+            <li class="span3">
+              <a class="thumbnail" href="http://soundready.fm/" target="_blank">
+                <img src="http://lorempixel.com/400/400/" alt="SoundReady.fm">
+              </a>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="http://kippt.com/" target="_blank">
+                <img src="http://lorempixel.com/400/400/" alt="SoundReady.fm">
+              </a>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="http://www.fleetio.com/" target="_blank">
+                <img src="http://lorempixel.com/400/400/" alt="SoundReady.fm">
+              </a>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="http://www.jshint.com/" target="_blank">
+                <img src="http://lorempixel.com/400/400/" alt="SoundReady.fm">
+              </a>
+            </li>
+        </ul>
+    </div>
+
+    <hr class="soften">
+    <div class="marketing">
+        <h1>개발자스러운 감각적인 테마들</h1>
+        <p class="marketing-byline">개발자스럽지 않는 테마는 여기에 나열하지 않았습니다. 너무 이쁘거나 너무 번잡한 테마는 IE6 에서만 지원합니다.</p>
+        <ul class="thumbnails example-sites">
+            <li class="span3">
+              <a class="thumbnail" href="http://soundready.fm/" target="_blank">
+                <img src="http://lorempixel.com/400/400/" alt="SoundReady.fm">
+              </a>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="http://kippt.com/" target="_blank">
+                <img src="http://lorempixel.com/400/400/" alt="SoundReady.fm">
+              </a>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="http://www.fleetio.com/" target="_blank">
+                <img src="http://lorempixel.com/400/400/" alt="SoundReady.fm">
+              </a>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="http://www.jshint.com/" target="_blank">
+                <img src="http://lorempixel.com/400/400/" alt="SoundReady.fm">
+              </a>
+            </li>
+        </ul>
+    </div>
+</div>
