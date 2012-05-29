@@ -1,6 +1,19 @@
 /* inherite */
 .page-main {
-    /*margin-top: 30px;*/
+    margin-top: 0;
+}
+.page-main .btn-large {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 14px 24px;
+    margin-right: 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.page-main .btn-large small {
+    font-size: 14px;
 }
 
 .intro-head {
@@ -20,7 +33,7 @@
 }
 
 .intro-head .inner {
-    /*background: transparent url(../img/grid-18px.png) top center;*/
+    background: transparent url(../img/background-haroopress.png) center -50px;
     padding: 45px 0 20px 0;
     -webkit-box-shadow: inset 0 10px 30px rgba(0, 0, 0, .3);
     -moz-box-shadow: inset 0 10px 30px rgba(0,0,0,.3);
@@ -37,6 +50,12 @@
     color: white;
     text-align: center;
     text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+
+/* download information */
+.download-info {
+    margin: 30px 0;
+    text-align: center;
 }
 
 /* quick link */
@@ -60,7 +79,7 @@ li {
 
 hr.soften {
     height: 1px;
-    margin: 54px 0;
+    margin: 30px 0;
     background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
     background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
     background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);

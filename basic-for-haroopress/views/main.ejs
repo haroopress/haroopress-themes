@@ -8,7 +8,7 @@
                 다양한 테마, 플러그인, 마크다운 포맷, 데이터 변환 유틸(옥토프레스, 워드프레스 등)<br>
             </p>
 
-            <p><strong>haroopress? :</strong> 하루프레스는 사용자 여러분의 피드백과 후원과 기부를 기다립니다.</p>
+            <p><strong>알림! :</strong> 하루프레스는 사용자 여러분의 피드백과 후원,기부를 기다립니다.</p>
         </div>
         <!-- /container -->
         <ul class="quick-links">
@@ -33,43 +33,64 @@
 </header>
 
 <div class="container page-main">
+    <div class="row download-info">
+        <div class="span12">
+            <a href="http://github.com/rhiokim/haroopress" class="btn btn-danger btn-large" onclick="_gaq.push(['_trackEvent', 'intro actions', 'GitHub Project', 'View project on GitHub']);">View Haroopress on Github</a>
+            <a href="https://github.com/rhiokim/haroopress/zipball/master" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'intro actions', 'Download', 'Download <%= config.meta.version %>']);">Download Haroopress <small>(v<%= config.meta.version %>)</small></a>
+        </div>
+    </div>
+    <hr class="soften">
     <div class="row">
         <div class="span4">
             <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
             <h2>No! 웹 서버, No! 데이터베이스</h2>
-            <p>Like you, we love building awesome products on the web. We love it so much, we decided to help people just like us do it easier, better, and faster. Bootstrap is built for you.</p>
+            <p>대부분의 블로그 서비스나 엔진은 웹 서버와 데이터베이스가 필요합니다. 하지만 하루프레스 웹 서버도 데이터베이스도 필요 없는 정적 페이지를 기반으로 하는 블로그 엔진입니다.</p>
         </div>
         <div class="span4">
             <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_079_podium.png">-->
             <h2>간편하고 빠른 정적 블로그 엔진</h2>
-            <p>Bootstrap is designed to help people of all skill levels—designer or developer, huge nerd or early beginner. Use it as a complete kit or use to start something more complex.</p>
+            <p>커멘드라인 도구에 익숙하다면 하루프레스를 설치하고 사용하는데 부담감 Zero! 에 가깝습니다. 물론 Git, Node, Markdown, JavaScript 를 안다면 하루프레스 해커가 될 수 있습니다.</p>
         </div>
         <div class="span4">
             <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_163_iphone.png">-->
-            <h2>감각적인 개발자용 테마들</h2>
-            <p>Originally built with only modern browsers in mind, Bootstrap has evolved to include support for all major browsers (even IE7!) and, with Bootstrap 2, tablets and smartphones, too.</p>
+            <h2>감성적인 테마들</h2>
+            <p>트위터 부트스트랩을 기반으로 테마 구조가 잡혀있어 개발자스러운 테마를 손 쉽게 적용할 수 있을 뿐아니라 만들 수도 있습니다.</p>
         </div>
     </div>
     <div class="row">
         <div class="span4">
             <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
-            <h2>개발자스러운 마크다운 포맷지원</h2>
-            <p>Like you, we love building awesome products on the web. We love it so much, we decided to help people just like us do it easier, better, and faster. Bootstrap is built for you.</p>
+            <h2>마크다운 포맷지원</h2>
+            <p>하루프레스의 모든 문서 포맷은 마크다운으로 일관되게 유지됩니다. 이는 다양한 포맷(PDF, EPub, Mobi, HTML 등등) 으로 손쉽게 변환할 수 있는 문서 포맷이기 때문입니다.</p>
         </div>
         <div class="span4">
             <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_079_podium.png">-->
             <h2>다양한 플러그인</h2>
-            <p>Bootstrap is designed to help people of all skill levels—designer or developer, huge nerd or early beginner. Use it as a complete kit or use to start something more complex.</p>
+            <p>트위터, 페이스북, 구글플러스등의 소셜라이징을 위한 플러그인 뿐만 아니라 하루프레스의 기본 레이아웃 구성요소를 제외한 대부분이 플러그인 아키텍쳐를 취하고 있습니다.</p>
         </div>
         <div class="span4">
             <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_163_iphone.png">-->
-            <h2>개발자들에게만 편리한 CLI</h2>
-            <p>Originally built with only modern browsers in mind, Bootstrap has evolved to include support for all major browsers (even IE7!) and, with Bootstrap 2, tablets and smartphones, too.</p>
+            <h2>편리한 CLI</h2>
+            <p>콘솔에 익숙한 개발자들을 위해 하루프레스의 기본 동작(포스팅, 생성, 배포 등)을 위해 Node 로 작성된 커멘드라인 명령을 기본적으로 제공합니다.(현재는 make 에 의존)</p>
         </div>
     </div>
-
-    <hr class="soften">
-    <div class="twitter"></div>
+    <div class="row">
+        <div class="span4">
+            <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
+            <h2>크로스플랫폼 지원</h2>
+            <p>현재는 맥 운영체제만 지원하며 향후 윈도우, 리눅스까지 지원 확장할 예정입니다.</p>
+        </div>
+        <div class="span4">
+            <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_079_podium.png">-->
+            <h2>팀블로깅에 최적화</h2>
+            <p>하루프레스는 기본적으로 팀 블로그를 위한 인터페이스를 갖추고 있습니다. 간단한 파일생성과 마크다운 편집만으로 한 블로그를 팀으로 운영할 수 있습니다.</p>
+        </div>
+        <div class="span4">
+            <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_163_iphone.png">-->
+            <h2>Github, Dropbox 연동</h2>
+            <p>Git 유저라면 Github 나 Bitbucket 을 통해서, 일반 유저라면 Dropbox 동기화를 통해서 언제 어디서든지 블로깅을 할 수 있습니다.</p>
+        </div>
+    </div>
 
     <hr class="soften">
     <div class="marketing">
@@ -101,27 +122,37 @@
 
     <hr class="soften">
     <div class="marketing">
-        <h1>개발자스러운 감각적인 테마들</h1>
+        <h1>하루프레스를 이용한 아름다운 사이트</h1>
         <p class="marketing-byline">개발자스럽지 않는 테마는 여기에 나열하지 않았습니다. 너무 이쁘거나 너무 번잡한 테마는 IE6 에서만 지원합니다.</p>
         <ul class="thumbnails example-sites">
-            <li class="span3">
+            <li class="span2">
               <a class="thumbnail" href="http://soundready.fm/" target="_blank">
-                <img src="http://lorempixel.com/400/400/" alt="SoundReady.fm">
+                <img src="http://lorempixel.com/200/200/" alt="SoundReady.fm">
               </a>
             </li>
-            <li class="span3">
+            <li class="span2">
               <a class="thumbnail" href="http://kippt.com/" target="_blank">
-                <img src="http://lorempixel.com/400/400/" alt="SoundReady.fm">
+                <img src="http://lorempixel.com/200/200/" alt="SoundReady.fm">
               </a>
             </li>
-            <li class="span3">
+            <li class="span2">
               <a class="thumbnail" href="http://www.fleetio.com/" target="_blank">
-                <img src="http://lorempixel.com/400/400/" alt="SoundReady.fm">
+                <img src="http://lorempixel.com/200/200/" alt="SoundReady.fm">
               </a>
             </li>
-            <li class="span3">
+            <li class="span2">
+              <a class="thumbnail" href="http://www.fleetio.com/" target="_blank">
+                <img src="http://lorempixel.com/200/200/" alt="SoundReady.fm">
+              </a>
+            </li>
+            <li class="span2">
+              <a class="thumbnail" href="http://www.fleetio.com/" target="_blank">
+                <img src="http://lorempixel.com/200/200/" alt="SoundReady.fm">
+              </a>
+            </li>
+            <li class="span2">
               <a class="thumbnail" href="http://www.jshint.com/" target="_blank">
-                <img src="http://lorempixel.com/400/400/" alt="SoundReady.fm">
+                <img src="http://lorempixel.com/200/200/" alt="SoundReady.fm">
               </a>
             </li>
         </ul>
