@@ -18,7 +18,7 @@ function github(options){
             return this.description;
         }
     };
-    var view = '{{#repos}}<li><a href="{{url}}" rel="popover" data-content="<p>{{fcnt}} {{wcnt}} {{icnt}}</p> {{body}}" data-original-title="{{name}}" target="_blank">{{name}}</a></li>{{/repos}}';
+    var view = '<ul>{{#repos}}<li><a href="{{url}}" rel="popover" data-content="<p>{{fcnt}} {{wcnt}} {{icnt}}</p> {{body}}" data-original-title="{{name}}" target="_blank">{{name}}</a></li>{{/repos}}</ul>';
 
     function render(target, repos){
         data.repos = repos;
