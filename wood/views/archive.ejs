@@ -20,9 +20,9 @@
                     </ul>
                     <p>
                         <strong><%= archive.author.head.name %></strong><br/>
-                        blog: <a href="<%= archive.author.blog %>" target="_blank"><%= archive.author.head.blog %></a><br/>
-                        twitter: <a href="http://twitter.com/<%= archive.author.twitter %>" target="_blank">@<%= archive.author.head.twitter %></a><br/>
-                        github: <a href="https://github.com/<%= archive.author.twitter %>" target="_blank"><%= archive.author.head.github %></a>
+                        blog: <a href="<%= archive.author.head.blog %>" target="_blank"><%= archive.author.head.blog %></a><br/>
+                        twitter: <a href="http://twitter.com/#!/<%= archive.author.head.twitter %>" target="_blank">@<%= archive.author.head.twitter %></a><br/>
+                        github: <a href="https://github.com/<%= archive.author.head.twitter %>" target="_blank"><%= archive.author.head.github %></a>
                     </p>
                     <p>
                         <a href="https://twitter.com/<%= archive.author.head.twitter %>" class="twitter-follow-button" data-show-count="true">Follow @<%= archive.author.head.twitter %></a>
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <%- partial('plugins/category-menu', { categories: categories }) %>
-            <%- partial('plugins/recents', { archives: archives }) %>
+            <%- partial('plugins/recents', { config: config.plugins.recents, dates: dates }) %>
         </div>
         <div class="span9">
             <div class="row">
@@ -53,7 +53,7 @@
                         </div>
 
                         <%- partial('plugins/facebook', config.plugins.facebook) %>
-                        <%- partial('plugins/google-plus', { config: config, archive: archive }) %>
+                        <%- partial('plugins/google-plus', { config: config.plugins.google, archive: archive }) %>
                         <%- partial('plugins/twitter', { config: config, archive: archive }) %>
 
                         <div class="markdown">

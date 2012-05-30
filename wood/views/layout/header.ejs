@@ -15,11 +15,6 @@
             if(twitter.display && twitter.user) { %>
             <a class="pull-right" style="margin-top: 5px;" href="http://twitter.com/<%= twitter.user %>" target="_blank"><img src="/img/social/twitter_dark.png" /></a>
           <% } %>
-          <%
-            var gplus = config.plugins.google.gplus;
-            if(gplus.display && gplus.user) { %>
-            <a class="pull-right" style="margin-top: 5px;" href="http://https://plus.google.com/u/0/<%= gplus.user %>" target="_blank"><img src="/img/social/google_dark.png" /></a>
-          <% } %>
 
           <form class="navbar-search pull-right" style="margin-right: 2px;" method="get" action="http://www.google.com/search">
               <input type="hidden" name="q" value="site:<%= config.meta.siteUrl.replace('http://','') %>" />
