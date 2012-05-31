@@ -7,14 +7,14 @@
                 <span class="icon-bar"></span>
             </a>
             <div class="social">
-                <a class="twitter" href="/">Twitter</a>
+                <%
+                    var twitter = config.plugins.twitter;
+                    if(twitter.display && twitter.user) { %>
+                    <a class="twitter" href="http://twitter.com/<%= config.plugins.twitter.user %>" target="_blank">Twitter</a>
+                <% } %>
                 <a class="rss" href="/rss.xml">RSS</a>
             </div>
-            <%
-                var twitter = config.plugins.twitter;
-                if(twitter.display && twitter.user) { %>
-                <a class="pull-right" href="http://twitter.com/<%= config.plugins.twitter.user %>" target="_blank"><img src="/img/buttons/twitter.png" /></a>
-            <% } %>
+            
 
             <div class="nav-collapse">
                 <ul class="nav">

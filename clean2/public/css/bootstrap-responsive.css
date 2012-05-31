@@ -379,7 +379,6 @@
   }
   .navbar-fixed-top {
     position: static;
-    margin-bottom: 18px;
   }
   .navbar-fixed-top .navbar-inner {
     padding: 5px;
@@ -387,6 +386,7 @@
   .navbar .container {
     width: auto;
     padding: 0;
+    min-height: 40px;
   }
   .navbar .brand {
     padding-left: 10px;
@@ -398,7 +398,7 @@
   }
   .navbar .nav {
     float: none;
-    margin: 0 0 9px;
+    margin: 0;
   }
   .navbar .nav > li {
     float: none;
@@ -415,19 +415,22 @@
   }
   .navbar .nav > li > a,
   .navbar .dropdown-menu a {
-    padding: 6px 15px;
+    padding: 3px 10px;
     font-weight: bold;
     color: #999999;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
   }
+  .navbar .navbar-inner .nav > li > a:hover {
+    text-decoration: none;
+  }
   .navbar .dropdown-menu li + li a {
     margin-bottom: 2px;
   }
   .navbar .nav > li > a:hover,
   .navbar .dropdown-menu a:hover {
-    background-color: #222222;
+    background: none;
   }
   .navbar .dropdown-menu {
     position: static;
@@ -479,6 +482,26 @@
   .nav-collapse {
     overflow: hidden;
     height: 0;
+  }
+  .navbar .social, .container .side {
+    display: none;
+  }
+  .navbar #search {
+    float: left;
+    margin: 5px 5px -2px;
+  }
+  .container .side, .container .articles {
+    margin-top: 10px;
+  }
+  .container.articles .well {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+  .footer {
+    margin-top: 0 !important;
+  }
+  .footer .pull-right, .footer .backtotop {
+    float: none !important;
   }
 }
 @media (min-width: 980px) {

@@ -4,11 +4,16 @@ body {
 	background-color: #f5f5f5;
 }
 body, p { 
-	font-family: Helvetica,나눔고딕,NanumGothic,"맑은 고딕","Malgun Gothic",Apple-Gothic,Dotum,돋움,Arial,sans-serif; 
+	font-family: 'Open Sans',나눔고딕,NanumGothic,"맑은 고딕","Malgun Gothic",Apple-Gothic,Dotum,돋움,Arial,sans-serif; 
 }
 a, a:hover {
 	color: #333;
 	text-decoration: underline;
+}
+.well p, .well ul, .well h1, .well h2, .well h3, .well h4, .well h5, .well h6 {
+	margin-bottom: 1.5em;
+	font-size: 15px;
+	line-height: 1.6;
 }
 header.overview {
     margin-top: 100px;
@@ -20,15 +25,21 @@ header.overview {
 .side, .articles { 
 	margin-top: 80px; 
 }
+.side {
+	padding-top: 38px;
+}
 .side > .well {
-	padding: 1.5em 60px 0 0;
-	margin: 0;
+	padding: 0 60px 0 0;
+	margin: 0 0 3em;
+	text-align: right;
 }
-.side > .category {
-	padding-top: 35px;
+.side .recent .title {
+	margin-bottom: .5em;
 }
-.side > .recent .nav-list li {
+.side > .recent .nav-list li, ._github_repo li {
 	margin: 0;
+	padding: 0;
+	list-style: none;
 	border-bottom: 1px solid #d5d5d5;
 }
 .side > .recent .nav-list li a {
@@ -40,6 +51,12 @@ header.overview {
 .side > .recent .nav-list li a:hover {
 	color: #333;
 }
+._github_repo a {
+	text-decoration: none;
+}
+._github_repo li {
+	font-size: 13px;
+}
 .navbar-inner {
 	background: url(../img/bg-header.gif) repeat 0 0;
 	box-shadow: none;
@@ -47,17 +64,16 @@ header.overview {
 .navbar .nav > li > a {
 	line-height: 45px;
 	color: #fff;
-	font-size: 15px;
-	font-family: 'Rokkitt',serif;
+	font-size: 14px;
+	font-family: 'Open Sans',serif;
 	text-transform: uppercase;
 }
-#author { 
-	padding-top: 35px;
-	text-align: right;
-	font-size: 14px;
+#author {
+	padding-top: 0;
 }
 #author p {
-	margin-top: 8px;
+	margin: 8px 0 0;
+	font-size: 13px;
 }
 #author a { 
 	text-decoration: none; 
@@ -70,7 +86,7 @@ header.overview {
 }
 #author .profile li {
 	padding: 1px 0;
-	font: normal 14px/1.5 'Rokkitt',serif;
+	font-size: 12px;
 	list-style: none;
 	border-bottom: 1px solid #d5d5d5;
 	background: url(../img/icon-social.png) no-repeat 0 0;
@@ -99,12 +115,6 @@ header.overview {
 #author .profile li a:hover, #author .profile li a:focus {
 	color: #333;
 }
-.contributors {
-	text-align: right;
-}
-.contributors h6 {
-	text-align: right;
-}
 .contributors img {
 	width: 50px;
 	height: 50px;
@@ -112,7 +122,12 @@ header.overview {
 	border: 1px solid #d5d5d5;
 }
 .contributors p {
-	line-height: 1;
+	padding: 7px 10px 0 0;
+	line-height: 1.2;
+	font-size: 13px;
+}
+.contributor a, .contributor p {
+	float: right;
 }
 .well {
 	padding: 35px 0 0 0;
@@ -122,10 +137,13 @@ header.overview {
 	box-shadow: none;
 }
 .articles .well {
-	margin-bottom: 1.5em;
+	margin-bottom: 0;
 	padding-bottom: 1.5em;
 }
-.well p { font-size: inherit; }
+.articles h2.date, .articles .title {
+	margin-bottom: .5em;
+	font-size: 22px;
+}
 .well .nav-list {
 	padding: 0;
 }
@@ -133,8 +151,15 @@ header.overview {
 	margin: 0 0 5px;
 	padding: 1px 0;
 	font: bold 14px/1.5 'Rokkitt',serif;
-	text-align: right;
 	text-transform: uppercase;
+}
+.well .nav-list .title {
+	margin-bottom: 1em;
+	font-family: Helvetica;
+	font-size: 12px;
+}
+.well .nav-list .title a {
+	text-decoration: none;
 }
 .well .nav-list li a {
 	display: inline-block;
@@ -150,16 +175,19 @@ header.overview {
 	   -moz-border-radius: 3px;
 	        border-radius: 3px;
 }
-.well p, .well ul, .well h1, .well h2, .well h3, .well h4, .well h5, .well h6 {
+.well h1 {
 	margin-bottom: 1em;
 }
 .well li { line-height: 1.6; }
-#author h3, .well .nav .nav-header, .contributors h6 {
+.side .title {
 	margin-bottom: 1em;
 	font-family: Helvetica;
 	font-size: 12px;
 	text-transform: uppercase;
 	color: #333;
+}
+.side .title > a {
+	text-decoration: none;
 }
 .nav-list > .active > a, .nav-list > .active > a:hover, .well .nav-list li a:hover {
 	background-color: #333;
@@ -177,14 +205,22 @@ header.overview {
 .page-header > h1 {
 	font-size: 34px;
 }
+.page-header > h1 small, .page-header > h1 .badge {
+	vertical-align: middle;
+}
+.page-header > h1 .badge {
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+}
 .page-header > h1 > img {
-	margin-right: 5px;
+	margin-right: 10px;
 }
 .page-header > .meta {
 	margin-bottom: 10px;
-	font: bold 11px/1.5 "Helvetica";
+	font: bold 12px/1.5 "Helvetica";
 	text-transform: uppercase; 
-	color:#000;
+	color:#333;
 }
 .page-header .time { 
 	padding: 0 5px 0 10px;
@@ -192,22 +228,21 @@ header.overview {
 	font-weight: normal;
 }
 .articles .well > .meta {
-	padding: 1.5em 0;
+	padding: 1.2em 0;
+	margin-top: 4em;
 	border-top: 1px dashed #d5d5d5;
 	background: url(../img/bg-tag.gif) repeat-x left bottom;
 	text-align: right;
 	text-transform: uppercase;
 	font: 14px/1.5 'Rokkitt',serif;
 }
-.articles .meta .tags {
+.articles .meta .cmt {
 	float: left;
+	padding: 5px 1px 3px;
 	margin: 0;
-	padding-top: 4px;
-}
-.articles .meta .tags > a {
-	padding: 3px 1px;
 	line-height: 1.5;
 	font: 14px/1.5 'Rokkitt',serif;
+	text-decoration: none;
 }
 .articles .more, .articles .more:visited, footer .backtotop {
 	display: inline-block;
@@ -266,12 +301,39 @@ header.overview {
 .articles .disqus a {
 	text-decoration: none;
 }
-.articles .comment-img {
+.archives {
+	margin-bottom: 3em;
+	border-bottom: 1px dashed #d5d5d5;
+}
+.articles .archive {
+	padding-left: 70px;
+	margin-bottom: 1.5em;
+}
+.archive .img {
 	float: left;
+	margin-left: -70px;
 	border: 1px solid #d5d5d5;
 }
-.comment-body {
-	float: left;
+.archive .bd {
+	font-size: 14px;
+	line-height: 1.5;
+}
+.archive .bd p {
+	margin: 0;
+}
+.archive h3 {
+	margin-bottom: 3px;
+}
+.lists {
+	margin: 0;
+	list-style: none;
+}
+.lists li {
+	margin-bottom: 1.5em;
+}
+.lists h3 {
+	display: inline-block;
+	margin: 0 .3em 0 0;
 }
 footer .backtotop { 
 	float: right;
@@ -307,6 +369,7 @@ footer .backtotop {
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAwElEQVR42p2S0Q3DIAxEGYERMgIjeISMwCjdoCN4FEboCBmB73xULUiXnmUR0cTSfQC6pzuLcMx736XpA21N2u/CbDxgoNKUroBSU4bRgh4zY0QKcaleBqL/VqjYQcSbTpMgOmMTtA4gMquSYYYBENYpI+PS43XzD0RD5Y5OUthHGBNM1S7Q1NRRArUQ3OcjhTtv58sEhHUY274HQyxQcht/utirA8bgv62pIwaYcF5wFogA9r44jMvOdyCx6473C1wu9X1jC7RMAAAAAElFTkSuQmCC);
 }
 .footer {
+	margin-top: 6em;
 	font-size: 12px;
 	line-height: 1.7;
 }

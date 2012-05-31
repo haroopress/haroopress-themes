@@ -27,14 +27,8 @@
                         <div>
                             <%- article.html %>
                         </div>
-                        <a class="pull-right" href="/post/<%= article._file %>#disqus_thread" data-disqus-identifier="<%= id %>"></a>
                         <div class="meta clearfix">
-                            <p class="tags"><!-- 임시 -->
-                                <a href="/">JS</a>
-                                <a href="/">Canvas</a>
-                                <a href="/">CSs</a>
-                                <a href="/">WebGL</a>
-                            </p>
+                            <a class="cmt" href="/post/<%= article._file %>#disqus_thread" data-disqus-identifier="<%= id %>"></a>
                             <a class="more" href="/post/<%= article._file %>">Read more</a>
                         </div>
                     </div>

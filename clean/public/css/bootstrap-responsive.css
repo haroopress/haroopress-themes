@@ -386,6 +386,7 @@
   }
   .navbar .container {
     width: auto;
+    min-height: 40px;
     padding: 0;
   }
   .navbar .brand {
@@ -479,6 +480,22 @@
   .nav-collapse {
     overflow: hidden;
     height: 0;
+  }
+  .navbar #search, .navbar .social, .container .side {
+    display: none;
+  }
+  .container .side, .container .articles {
+    margin-top: 10px;
+  }
+  .container.articles .well {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+  .footer {
+    margin-top: 0 !important;
+  }
+  .footer .pull-right, .footer .backtotop {
+    float: none !important;
   }
 }
 @media (min-width: 980px) {

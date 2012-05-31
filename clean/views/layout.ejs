@@ -16,6 +16,7 @@
 
     <link href="/rss.xml" rel="alternate" title="<%= config.meta.defaultTitle %>" type="application/rss+xml">
     <link href='http://fonts.googleapis.com/css?family=Magra:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
     <!-- Le styles -->
     <link rel="canonical" href="<%= config.meta.siteUrl %>">
@@ -55,6 +56,6 @@
         $('pre > code').parent().addClass('prettyprint linenums');
         prettyPrint();
     </script>
-    <%- partial('plugins/google-analysis', config.plugins.google) %>
+    <%- partial('plugins/google-analysis', config.analytics) %>
 </body>
 </html>
