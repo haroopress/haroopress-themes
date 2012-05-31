@@ -1,0 +1,9 @@
+			<div class="well">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Categories</li>
+                    <li class="active"><a href="/category">Home</a></li>
+                    <% for(var cate in categories) { %>
+                    <li><a href="/category/<%= cate %>"><%= cate %></a></li>
+                    <% } %>
+                </ul>
+            </div>
