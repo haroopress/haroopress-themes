@@ -335,7 +335,11 @@ header.overview {
 .archive .img {
 	float: left;
 	margin-left: -70px;
-	border: 1px solid #d5d5d5;
+}
+.archive > a > img {
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+	        border-radius: 50%;
 }
 .archive .bd {
 	font-size: 14px;
