@@ -4,7 +4,7 @@
             <h1>HAROOPRESS [하루프레스]</h1>
 
             <p class="lead">
-                웹 서버와 데이터베이스가 필요 없는 초 스피드 간편, 편리한 정적 페이지 기반의 블로그 엔진! <br>
+                웹 서버와 데이터베이스가 필요없는 초 간편, 편리한 정적 페이지 기반의 컨텐츠 메니징 시스템(CMS) ! <br>
                 다양한 테마, 플러그인, 마크다운 포맷, 데이터 변환 유틸(옥토프레스, 워드프레스 등)<br>
             </p>
 
@@ -39,7 +39,7 @@
             <a href="https://github.com/rhiokim/haroopress/zipball/master" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'intro actions', 'Download', 'Download <%= config.meta.version %>']);">Download Haroopress <small>(v<%= config.meta.version %>)</small></a>
         </div>
     </div>
-    <hr class="soften">
+
     <div class="row">
         <div class="span4">
             <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
@@ -70,8 +70,8 @@
         </div>
         <div class="span4">
             <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_163_iphone.png">-->
-            <h2>편리한 CLI</h2>
-            <p>콘솔에 익숙한 개발자들을 위해 하루프레스의 기본 동작(포스팅, 생성, 배포 등)을 위해 Node 로 작성된 커멘드라인 명령을 기본적으로 제공합니다.(현재는 make 에 의존)</p>
+            <h2>데이터 마이그레이션</h2>
+            <p>Ruby의 Jekyll 기반의 옥토프레스 데이터 마이그레이션을 일부 지원하고 향후 <del>워드프레스</del>, <del>텀블러</del>, <del>티스토리</del> 등도 지원할 예정입니다.</p>
         </div>
     </div>
     <div class="row">
@@ -99,13 +99,105 @@
         </div>
         <div class="span4">
             <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_163_iphone.png">-->
-            <h2>데이터 마이그레이션</h2>
-            <p>Ruby의 Jekyll 기반의 옥토프레스 데이터 마이그레이션을 일부 지원하고 향후 <del>워드프레스</del>, <del>텀블러</del>, <del>티스토리</del> 등도 지원할 예정입니다.</p>
+            <h2>편리한 CLI</h2>
+            <p>콘솔에 익숙한 개발자들을 위해 하루프레스의 기본 동작(포스팅, 생성, 배포 등)을 위해 Node 로 작성된 커멘드라인 명령을 기본적으로 제공합니다.(현재는 make 에 의존)</p>
         </div>
         <div class="span4">
             <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_079_podium.png">-->
+            <h2>다양한 출력포맷 지원</h2>
+            <p>HTML, PDF, ePub, Mobi 등의 다양한 포맷으로의 출력을 지원합니다.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span3">
+            <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
+            <h2>오픈소스</h2>
+            <p>본인에 도메인을 연결할 수 있습니다. (<a href="https://github.com/blog/315-cname-support-for-github-pages" target="_blank">CNAME support for Github Pages</a>)</p>
+        </div>
+        <div class="span3">
+            <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_163_iphone.png">-->
+            <h2>편리한 CLI</h2>
+            <p>콘솔에 익숙한 개발자들을 위해 하루프레스의 기본 동작(포스팅, 생성, 배포 등)을 위해 Node 로 작성된 커멘드라인 명령을 기본적으로 제공합니다.(현재는 make 에 의존)</p>
+        </div>
+        <div class="span3">
+            <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_079_podium.png">-->
             <h2>자바스크립트 100%</h2>
             <p>모든 코드가 자바스크립트로 작성되었습니다. 자바스크립트를 잘 안다면 하루프레스 코드를 보는 순간 설계에 대해 논하게 될 것입니다. ^_^; 물론 서버측은 Node 로 작성되었습니다.</p>
+        </div>
+        <div class="span3">
+            <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_079_podium.png">-->
+            <h2>다양한 출력포맷 지원</h2>
+            <p>HTML, PDF, ePub, Mobi 등의 다양한 포맷으로의 출력을 지원합니다.</p>
+        </div>
+    </div>
+
+    <hr class="soften">
+
+    <div class="page-header">
+        <h1>손쉬운 인스톨 및 사용법 <small>하루프레스의 설치법과 블로깅 방법에 대해서 소개합니다.</small></h1>
+    </div>
+    <h2>설치</h2>
+    <div class="row">
+        <div class="span4">
+            <h3>콘솔에 익숙하다면 소스 빌드가 쵝오!</h3>
+        </div>
+        <div class="span8">
+            <h3>소스 설치</h3>
+            <p>
+                하루프레스는 Node 와 Git 기반으로 동작하기 때문에 기본적으로 Node 의 최신버젼과 Git 을 설치되어 있어야 합니다.
+                설치 방법은 링크를 참고해주세요. <a href="http://nodejs.org/" target="_blank">Node</a>,<a href="http://git-scm.org/" target="_blank">Git</a>
+            </p>
+            <pre>
+<code>$ git clone git@github.com:rhiokim/haroopress /path/to/yourblog.com
+$ cd /path/to/yourblog.com
+$ make init
+</code></pre>
+        </div>
+    </div>
+
+    <h2>환경설정</h2>
+    <div class="row">
+        <div class="span4">
+            <h3>오직 JSON 포맷만을 고수합니다.</h3>
+        </div>
+        <div class="span8">
+            <h3>Meta</h3>
+            <p>
+                설명
+            </p>
+
+            <h3>Configuration</h3>
+            <p>
+                설명
+            </p>
+
+            <h3>Plugins</h3>
+            <p>
+                설명
+            </p>
+        </div>
+    </div>
+
+    <h2>컨텐츠 생성</h2>
+    <div class="row">
+        <div class="span4">
+            <h3>블로깅</h3>
+        </div>
+        <div class="span8">
+            <h3>퀵 설치</h3>
+            <h3>소스 설치</h3>
+        </div>
+    </div>
+
+    <h2>배포</h2>
+    <div class="row">
+        <div class="span4">
+            <h3>배포</h3>
+        </div>
+        <div class="span8">
+            <h3>퀵 설치</h3>
+            <h3>소스 설치</h3>
         </div>
     </div>
 
