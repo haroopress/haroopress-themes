@@ -125,51 +125,80 @@
     </div>
 
     <div class="howto">
-        <h2><span class="icon-book"></span> 설치 요구사항</h2>
         <div class="row">
-            <div class="span4">
-                <h3>하루프레스가 동작하기 위한 환경</h3>
-            </div>
-            <div class="span8">
-                <h3>Node.js</h3>
-                <img src="/img/intro/nodejs.png" /><br/>
+            <div class="span6">
+                <h2><span class="icon-book"></span> 설치 요구사항</h2>
                 <p>
                     하루프레스는 모두 노드를 기반으로 한 자바스크립트 코드로 작성되었습니다. 그래서 하루프레스를 이용하기 위해서는 노드 최신버젼을 설치해 주어야 합니다.
 
                     <a href="http://nodejs.org" target="_blank">노드 공식 사이트</a>를 통해 설치 방법과 레퍼런스를 찾아볼 수 있습니다.
                     <blockquote>하루프레스는 노드 <code>v0.6.12</code> 버젼으로 개발되어졌습니다.</blockquote>
+                    <img src="/img/intro/nodejs.png" />
                 </p>
 
-                <h3>Git</h3>
-                <img src="/img/intro/git.png" /><br/>
                 <p>
-                    하루프레스는 총 6가지의 오픈소스로 개발되었습니다. 이 오픈소스도 모두 Github.com 을 통해 관리 되어지고 있어 하루프레스에서도 이것들을 서브모듈로 관리되어지고 있습니다. <a href="http://nodejs.org/" target="_blank">Node</a>,<a href="http://git-scm.org/" target="_blank">Git</a>
+                    하루프레스는 총 6가지의 오픈소스로 개발되었고 대부분의 오픈소스가 모두 Github.com 을 통해 관리 되어지고 있어 이것들을 서브모듈로 관리되어지고 있습니다. <a href="http://nodejs.org/" target="_blank">Node</a>,<a href="http://git-scm.org/" target="_blank">Git</a>
+
+                    <br/><img src="/img/intro/git.png" />
+                </p>
+                <p>
+                    또한 하루프레스가 생성하는 정적 페이지를 웹에서 확인하기 위해서는 Github.com 에 본인의 계정과 공개(Public)된 저장소가 존재해야 존재해야 합니다.
+                </p>
+                <p>
+                    <iframe src="http://player.vimeo.com/video/4704533?color=ffffff" width="560" height="320" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/4704533">Sofia's People</a> from <a href="http://vimeo.com/philipbloom">Philip Bloom</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
                 </p>
             </div>
-        </div>
-        <h2><span class="icon-wrench"></span> 설치</h2>
-        <div class="row">
-            <div class="span4">
-                <h3>콘솔이 익숙한 개발자라면 소스 빌드</h3>
-            </div>
-            <div class="span8">
-                <h3>소스 설치</h3>
-                <p>
-                    하루프레스는 Node 와 Git 기반으로 동작하기 때문에 기본적으로 Node 의 최신버젼과 Git 을 설치되어 있어야 합니다.
-                    설치 방법은 링크를 참고해주세요. <a href="http://nodejs.org/" target="_blank">Node</a>,<a href="http://git-scm.org/" target="_blank">Git</a>
-                </p>
+            <div class="span6">
+                <h2><span class="icon-wrench"></span> 설치</h2>
+                <h5>소스를 이용한 설치</h5>
                 <pre>
 <code>$ git clone git@github.com:rhiokim/haroopress /path/to/yourblog.com
 $ cd /path/to/yourblog.com
-$ make init</code></pre>
+$ make init
+... node modules install global ...
+... git submodule init ...
+... build submodules ...</code></pre>
+
+                <h5>하루프레스 환경설정</h5>
+                <pre>
+<code>
+========================================
+= configurate haroopress
+========================================
+haroo> Please! insert your blog title :
+haroo> Please! insert your blog description :
+haroo> Please! insert site url (e.g. http://site.com) :
+haroo> Author Name? (should matched source/data/authors/[author_name].markdown) :
+haroo> &lt;meta name="keyword" content="[value]" /&gt; :
+
+haroo> Save? [y/n] : y ¶</code></pre>
+
+                <h5>배포를 위한 Github 저장소 지정</h5>
+                <p>
+                    Github 계정이 없다면 먼저 생성한 후 본인의 아이디로 된 새로운 저장소를 생성한다. 저장소 명칭이 <code>id.github.com</code>
+                    으로된 저장소를 생성한다.
+
+                    <br/><br/>e.g) 아이디가 haroopress 라면 <a href="https://github.com/haroopress/haroopress.github.com" target="_blank">haroopress.github.com</a> 이라는 이름의 저장
+                </p>
+                <pre>
+<code>========================================
+= setup repository for deployment
+========================================
+haroo> Enter the read/write url for your repository: https://github.com/{account}/{account}.github.com.git
+</code></pre>
+                <p>
+                    자세한 설치법 : <a href="/post/haroopress-quick-guide">설치 퀵 가이드</a>, <a href="/post/harupeureseu-hwangyeongseoljeong-hagi/">수동 환경설정 가이드</a>
+                </p>
             </div>
         </div>
+
     </div>
 
+    <hr class="soften">
 
     <div class="marketing">
         <h1>간편한 사용법</h1>
-        <p class="marketing-byline">포스팅(Posting), 생성(Genetrate), 퍼블리싱(Publishing).</p>
+        <p class="marketing-byline">포스팅(Posting), 생성(Generate), 퍼블리싱(Publishing).</p>
     </div>
     <div class="howto">
         <div class="row">
@@ -181,53 +210,70 @@ $ make init</code></pre>
 
                     <h5>새로운 포스트</h5>
                     <pre><code>$ make new-post
-haroo> Input article title : ? ¶
-haroo> Input article category : ? ¶
-haroo> Input article tag (e.g tag1, tag2, tag3) : ? ¶
-haroo> [article markdown]
-haroo> [image asset path]</code></pre>
+haroo> Input article title : 기사 제목 ¶
+haroo> Input article category : 카테고리 ¶
+haroo> Input article tag (e.g tag1, tag2, tag3) : 태그 ¶
+haroo> 파일 및 디렉토리 생성 정보</code></pre>
 
                     <h5>새로운 페이지</h5>
                     <pre><code>$ make new-post
-haroo> Input page title : ? ¶
-haroo> Input page category : ? ¶
-haroo> Input page tag (e.g tag1, tag2, tag3) : ? ¶
-haroo> [page markdown]
-haroo> [image asset path]</code></pre>
+haroo> Input page title : 페이지 제목 ¶
+haroo> Input page category : 카테고리 ¶
+haroo> Input page tag (e.g tag1, tag2, tag3) : 태그 ¶
+haroo> 파일 및 디렉토리 생성 정보</code></pre>
                </p>
             </div>
             <div class="span4">
-                <h2><span class="icon-edit"></span> 생성하기</h2>
+                <h2><span class="icon-magic"></span> 생성하기</h2>
                 <p>
                     데이터베이스가 필요없는 하루프레스의 모든 데이터는 페이지로 생성됩니다.
                     그러기 위해서는 <code>make gen</code> 이라는 명령어로 정적 페이지를 생성할 수 있습니다.
+
                     <h5>정적 페이지 생성</h5>
                     <pre><code>$ make gen
 haroo> clear to deploy directory¶
 haroo> clear to public directory
-=========================
+=====================================
 = generate to static page
-=========================
+=====================================
 haroo> cp -R [source] [destination]
 haroo> export rss.xml ¶
-haroo> export 404.html ¶
-haroo> export index.html ¶
-haroo> export archives.html ¶
-haroo> export article.html ¶
-haroo> export categories.html ¶
-haroo> export category.html ¶
-haroo> export authors.html ¶
-haroo> export author.html ¶
+... 정적 파일 생성 정보 ...
 haroo> export pages.html ¶</code></pre>
                </p>
             </div>
             <div class="span4">
-                <h2><span class="icon-edit"></span> 퍼블리싱하기</h2>
+                <h2><span class="icon-github"></span> 퍼블리싱하기</h2>
+                <!--p>
+                    퍼블리싱하기 전 작성한 기사나 페이지가 어떻게 표시되는지 확인하고 싶다면 간단한 명령어만으로 내 컴퓨터에서 바로 볼 수 있습니다.
+                    <h5>배포 전 미리보기</h5>
+                    <pre><code>$ make preview
+=====================================
+= preview static page
+=====================================
+haroo> Start server at http://localhost:8081 ¶
+
+Show me the browser? [y/n] : </code></pre>
+               </p-->
+                <p>
+                    하루프레스는 <code>make deploy</code> 라는 명령어로 설치 과정에서 지정한 Github 저장소로 퍼블리싱을 해줍니다.
+                    <h5>Github 저장소로 배포</h5>
+                    <pre><code>$ make deploy
+=====================================
+= deploy to github
+=====================================
+haroo> Resources copy to Deploy directory
+haroo> git add .¶
+... 배포 진행 과정 ...
+haroo> open http://yourblog.com ? [y/n]</code></pre>
+                    하루프레스는 <a href="https://help.github.com/categories/20/articles" target="_blank">Github의 Pages 서비스</a>를
+                    이용하여 사이트가 운영되기 때문에 생성된 정적 파일들을 설치 시 지정한 Github 저장소로 자동으로 배포를 진행합니다.
+               </p>
             </div>
         </div>
     </div>
 
-    <hr class="soften">
+    <!--hr class="soften">
     <div class="marketing">
         <h1>개발자스러운 감각적인 테마들</h1>
         <p class="marketing-byline">개발자스럽지 않는 테마는 여기에 나열하지 않았습니다. 너무 이쁘거나 너무 번잡한 테마는 IE6 에서만 지원합니다.</p>
@@ -291,5 +337,25 @@ haroo> export pages.html ¶</code></pre>
               </a>
             </li>
         </ul>
+    </div-->
+
+    <hr class="soften">
+
+    <div class="roadmap">
+        <div class="row">
+            <div class="span6">
+                <h2><span class="icon-sitemap"></span> Roadmap</h2>
+                <p>
+                     <ul class="unstyled">
+                        <li><span class="icon-plus"></span> 다국어를 지원</li>
+                        <li><span class="icon-plus"></span> 마크다운으로 작성된 페이지를 웹에서 프리젠테이션 할 수 있는 플러그인</li>
+                        <li><span class="icon-plus"></span> 크로스 플랫폼(Mac OS X, Window 7, Ubuntu 등) 지원</li>
+                        <li><span class="icon-plus"></span> 데이터 컨버터 (워드프레스, 블로거, 텀블러 등)</li>
+                        <li><span class="icon-plus"></span> Heroku 배포와 Rsync 방식 배포 지원</li>
+                        <li><span class="icon-plus"></span> 테마를 좀더 쉽고 편하게 만들 수 있도록 템플릿 엔진과 테마 기능 고도화</li>
+                     </ul>
+                </p>
+            </div>
+        </div>
     </div>
 </div>
