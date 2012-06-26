@@ -4,10 +4,11 @@ body {
 	background-color: #f5f5f5;
 }
 body, p { 
-	font-family: 'Open Sans',나눔고딕,NanumGothic,"맑은 고딕","Malgun Gothic",Apple-Gothic,Dotum,돋움,Arial,sans-serif; 
+	font-family: Georgia, 나눔고딕, NanumGothic, "맑은 고딕", "Malgun Gothic", Apple-Gothic, Dotum, 돋움, Helvetica, Arial, sans-serif;
+	/*font-family: 'Open Sans',나눔고딕,NanumGothic,"맑은 고딕","Malgun Gothic",Apple-Gothic,Dotum,돋움,Arial,sans-serif; */
 }
 a, a:hover {
-	color: #333;
+	color: #363339;
 	text-decoration: underline;
 }
 .well p, .well ul, .well h1, .well h2, .well h3, .well h4, .well h5, .well h6 {
@@ -26,12 +27,17 @@ header.overview {
 	margin-top: 80px; 
 }
 .side {
+	background: url(../img/bg-dot.gif) repeat-y 0 0;
+}
+.articles {
+	background: url(../img/bg-dot.gif) repeat-y 100% 0;
+}
+.side {
 	padding-top: 38px;
 }
 .side > .well {
 	padding: 0 60px 0 0;
 	margin: 0 0 3em;
-	text-align: right;
 }
 .side .recent .title {
 	margin-bottom: .5em;
@@ -43,7 +49,7 @@ header.overview {
 	border-bottom: 1px solid #d5d5d5;
 }
 .side > .recent .nav-list li a {
-	padding-right: 0;
+	padding-left: 0;
 }
 .side > .recent .nav-list li a, .side > .recent .nav-list li a:hover {
 	background: transparent;
@@ -53,9 +59,20 @@ header.overview {
 }
 ._github_repo a {
 	text-decoration: none;
+	font-size: 13px;
+}
+._github_repo ul {
+	margin: 0;
 }
 ._github_repo li {
 	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+}
+.fbbd {
+	width: 100%;
+}
+.fb_edge_widget_with_comment {
+	float: right;
 }
 .navbar-inner {
 	background: url(../img/bg-header.gif) repeat 0 0;
@@ -72,8 +89,8 @@ header.overview {
 	padding-top: 0;
 }
 #author p {
-	margin: 8px 0 0;
-	font-size: 13px;
+	margin: 1.5em 0 0;
+	font: 13px/1.5 'Open Sans', sans-serif;
 }
 #author a { 
 	text-decoration: none; 
@@ -83,13 +100,15 @@ header.overview {
 }
 #author .profile {
 	margin-top: 1.5em;
+	margin-left: 0;
 }
 #author .profile li {
-	padding: 1px 0;
+	padding: 1px 0 1px 28px;
 	font-size: 12px;
 	list-style: none;
 	border-bottom: 1px solid #d5d5d5;
 	background: url(../img/icon-social.png) no-repeat 0 0;
+	font-family: 'Open Sans', sans-serif;
 }
 #author .profile li.nickname {
 	text-transform: uppercase;
@@ -99,6 +118,7 @@ header.overview {
 	font-weight: bold;
 	font-size: 13px;
 	text-transform: uppercase;
+	padding-left: 0;
 }
 #author .profile li.blog {
 	background-position: 0 2px;
@@ -122,17 +142,18 @@ header.overview {
 	border: 1px solid #d5d5d5;
 }
 .contributors p {
-	padding: 7px 10px 0 0;
+	padding: 7px 0 0 10px;
 	line-height: 1.2;
 	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
 }
 .contributor a, .contributor p {
-	float: right;
+	float: left;
 }
 .well {
 	padding: 35px 0 0 0;
 	border-bottom: 1px solid #eee;
-	color: #666;
+	color: #555;
 	border: none;
 	box-shadow: none;
 }
@@ -150,13 +171,14 @@ header.overview {
 .well .nav-list li {
 	margin: 0 0 5px;
 	padding: 1px 0;
-	font: bold 14px/1.5 'Rokkitt',serif;
+	font: bold 12px/1.5 'Open Sans', sans-serif;
 	text-transform: uppercase;
 }
-.well .nav-list .title {
-	margin-bottom: 1em;
-	font-family: Helvetica;
-	font-size: 12px;
+.well .nav-list li.title {
+	/*font-family: Georgia,Times New Roman,serif;*/
+	font-style: italic;
+	font-size: 14px;
+	margin-bottom: .5em;
 }
 .well .nav-list .title a {
 	text-decoration: none;
@@ -176,18 +198,23 @@ header.overview {
 	        border-radius: 3px;
 }
 .well h1 {
-	margin-bottom: 1em;
+	margin-bottom: 10px;
 }
 .well li { line-height: 1.6; }
 .side .title {
-	margin-bottom: 1em;
-	font-family: Helvetica;
-	font-size: 12px;
+	margin-bottom: .5em;
+	/*font-family: Georgia,Times New Roman,serif;*/
+	font-size: 14px;
+	font-style: italic;
+	color: #363339;
+	border-bottom: 1px solid #555;
 	text-transform: uppercase;
-	color: #333;
 }
 .side .title > a {
 	text-decoration: none;
+}
+.side .title > a:hover {
+	color: #363339;
 }
 .nav-list > .active > a, .nav-list > .active > a:hover, .well .nav-list li a:hover {
 	background-color: #333;
@@ -197,13 +224,14 @@ header.overview {
 .page-header {
 	margin: 3px 0 1.5em;
 	padding: 0;
-	font-family: 'Rokkitt', serif;
 	font-size: 1.25em; 
-	color: #333; 
+	color: #363339; 
 	border: none;
 }
 .page-header > h1 {
-	font-size: 34px;
+	font-size: 2.4em;
+	font-style: italic;
+	/*font-family: Georgia,Helvetica,Arial,sans-serif;*/
 }
 .page-header > h1 small, .page-header > h1 .badge {
 	vertical-align: middle;
@@ -218,14 +246,13 @@ header.overview {
 }
 .page-header > .meta {
 	margin-bottom: 10px;
-	font: bold 12px/1.5 "Helvetica";
+	font: normal 11px/1.5 Verdana;
 	text-transform: uppercase; 
-	color:#333;
 }
 .page-header .time { 
-	padding: 0 5px 0 10px;
-	font-size: 11px; font-family: verdana; 
+	padding: 0 5px 0 0;
 	font-weight: normal;
+	color: #363339;
 }
 .articles .well > .meta {
 	padding: 1.2em 0;
@@ -233,24 +260,23 @@ header.overview {
 	border-top: 1px dashed #d5d5d5;
 	background: url(../img/bg-tag.gif) repeat-x left bottom;
 	text-align: right;
-	text-transform: uppercase;
-	font: 14px/1.5 'Rokkitt',serif;
+	/*font: 15px/1.5 font-family: Georgia,Times New Roman,serif;*/
 }
 .articles .meta .cmt {
 	float: left;
 	padding: 5px 1px 3px;
 	margin: 0;
 	line-height: 1.5;
-	font: 14px/1.5 'Rokkitt',serif;
+	font: 14px/1.5 'Open Sans', sans-serif;
 	text-decoration: none;
 }
 .articles .more, .articles .more:visited, footer .backtotop {
 	display: inline-block;
 	padding: 3px 10px;
-	font: 15px/1.5 "Rokkitt","Helvetica","Arial",sans-serif;
+	font: 12px/1.8 HelveticaNeueBold, Helvetica, Arial, sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #333;
+	color: #363339;
 	background: #ddd;
 	-webkit-border-radius: 3px;
 	   -moz-border-radius: 3px;
@@ -260,7 +286,7 @@ header.overview {
 	        transition: all 0.1s ease-in-out 0s;
 }
 .articles .more:hover, .articles .more:focus, footer .backtotop {
-	background: #333;
+	background: #363339;
 	color: #fff;
 }
 .articles .prev-next .button {
@@ -286,7 +312,7 @@ header.overview {
 	        border-radius: 50%;
 }
 .articles .prev-next .button:hover i {
-	background-color: #333;
+	background-color: #363339;
 }
 .articles .prev-next .next i {
 	margin-left: 8px;
@@ -372,6 +398,10 @@ footer .backtotop {
 	margin-top: 6em;
 	font-size: 12px;
 	line-height: 1.7;
+	background-color: #ddd;
+}
+.footer .well {
+	background: none;
 }
 .footer a {
 	text-decoration: none;
