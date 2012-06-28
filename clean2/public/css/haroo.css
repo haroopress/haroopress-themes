@@ -15,7 +15,7 @@ a:hover, a:focus {
 }
 .well p, .well ul, .well h1, .well h2, .well h3, .well h4, .well h5, .well h6 {
 	margin-bottom: 1.5em;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 1.6;
 }
 header.overview {
@@ -60,9 +60,22 @@ header.overview {
 ._github_repo li {
 	font-size: 13px;
 }
+.fbbd {
+	width: 100%;
+}
+.fb_edge_widget_with_comment {
+	float: right;
+}
+.navbar {
+	border-top: 4px solid #b2b2b2;
+}
 .navbar-inner {
+	min-height: 40px;
 	background: url(../img/bg-body.gif) repeat 0 0;
 	box-shadow: none;
+	/* border-bottom: 1px dashed rgba(0, 0, 0, 0.3);*/
+}
+.navbar .container {
 	border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
 }
 .navbar .nav > li > a {
@@ -82,7 +95,7 @@ header.overview {
 	padding-top: 0;
 }
 #author p {
-	margin: 8px 0 0;
+	margin: 1.5em 0 0;
 	font-size: 13px;
 }
 #author a { 
@@ -401,6 +414,9 @@ footer .backtotop {
 	margin-top: 6em;
 	font-size: 12px;
 	line-height: 1.7;
+}
+.footer > .container {
+	border-top: 3px solid rgba(0, 0, 0, 0.3);
 }
 .footer a {
 	text-decoration: none;

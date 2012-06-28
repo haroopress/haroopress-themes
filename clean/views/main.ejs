@@ -15,14 +15,14 @@
                 <div class="span9">
                     <div class="well">
                         <div class="page-header">
-                            <p class="meta">
-                                Javascript <!-- 임시 카테고리 -->
-                                <span class="time"><!-- %= article.head.published % -->04.05.2012</span>
-                            </p>
                             <h1>
                                 <img src="<%= article.author._gravatar %>" width="50" class="thumb" />
                                 <a href="/post/<%= article._file %>"><%= article.head.title %></a>
                             </h1>
+                            <p class="meta">
+                                <span class="time"><%= article.head.published %></span>
+                                in Javascript <!-- 임시 카테고리 -->
+                            </p>
                         </div>
                         <div>
                             <%- article.html %>

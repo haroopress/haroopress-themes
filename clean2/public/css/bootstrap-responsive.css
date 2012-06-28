@@ -132,6 +132,29 @@
   .carousel-caption {
     position: static;
   }
+  .navbar .social, .container .side {
+    display: none;
+  }
+  .navbar .nav > .divider-vertical {
+    display: none;
+  }
+  .navbar #search {
+    float: left;
+    margin: 5px 5px -2px;
+  }
+  .container .side, .container .articles {
+    margin-top: 10px;
+  }
+  .container.articles .well {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+  .footer {
+    margin-top: 0 !important;
+  }
+  .footer .pull-right, .footer .backtotop {
+    float: none !important;
+  }
 }
 @media (max-width: 767px) {
   body {
@@ -180,6 +203,12 @@
   .input-prepend input[class*="span"],
   .input-append input[class*="span"] {
     width: auto;
+  }
+  .side {
+    display: none !important;
+  }
+  .side > .well {
+    padding-right: 0 !important;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -267,7 +296,7 @@
   .offset4 {
     margin-left: 268px;
   }
-  .offset3 {
+  .offsƒ√et3 {
     margin-left: 206px;
   }
   .offset2 {
@@ -381,12 +410,11 @@
     position: static;
   }
   .navbar-fixed-top .navbar-inner {
-    padding: 5px;
+    padding: 7px 7px 0;
   }
   .navbar .container {
     width: auto;
-    padding: 0;
-    min-height: 40px;
+    padding: 0 0 7px;
   }
   .navbar .brand {
     padding-left: 10px;
@@ -405,9 +433,6 @@
   }
   .navbar .nav > li > a {
     margin-bottom: 2px;
-  }
-  .navbar .nav > .divider-vertical {
-    display: none;
   }
   .navbar .nav .nav-header {
     color: #999999;
@@ -483,25 +508,23 @@
     overflow: hidden;
     height: 0;
   }
-  .navbar .social, .container .side {
+  .navbar .social {
     display: none;
   }
+  .navbar .navbar-inner .btn-navbar {
+    margin: 0;
+  }
+  .navbar .navbar-inner .nav > li > a {
+    line-height: 1.8;
+  }
   .navbar #search {
-    float: left;
-    margin: 5px 5px -2px;
+    display: none;
   }
-  .container .side, .container .articles {
-    margin-top: 10px;
+  .navbar #search-text {
+    width: 100%;
   }
-  .container.articles .well {
-    margin-bottom: 1em;
-    padding-bottom: 1em;
-  }
-  .footer {
-    margin-top: 0 !important;
-  }
-  .footer .pull-right, .footer .backtotop {
-    float: none !important;
+  .side, .articles {
+    margin-top: 1em !important;
   }
 }
 @media (min-width: 980px) {
