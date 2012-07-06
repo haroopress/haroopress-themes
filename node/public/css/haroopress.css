@@ -16,6 +16,38 @@ body {
  */
 *, p {
     font-family: AppleSDGothicNeo-Medium;
+    color: #D2D8BA;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.well {
+    background-color: #3F4138;
+}
+
+a {
+    color: #A8C904;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #A8C904;
+}
+
+.page-header {
+    border-bottom: #2C2E23;
+}
+
+hr {
+    border-top: 1px solid #383A30;
+    border-bottom: 1px solid #46493B;
+}
+
+code, code span{
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.nav-list > li > a, .nav-list .nav-header {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
 }
 
 .markdown {
