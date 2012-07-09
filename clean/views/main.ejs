@@ -1,11 +1,5 @@
 <div class="container">
     <div class="row">
-        <div class="span3 side">
-            <%- partial('plugins/intro', config) %>
-            <%- partial('plugins/category-menu', { categories: categories }) %>
-            <%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors }) %>
-            <%- partial('plugins/github-repo', config.plugins.github) %>
-        </div>
         <div class="span9 articles">
             <% //for(var id in archives) {
                 for(var id = 0; id < dates.serialize.length; id++) {
@@ -36,8 +30,13 @@
             </div>
             <% } %>
         </div>
+        <div class="span3 side">
+            <%- partial('plugins/intro', config) %>
+            <%- partial('plugins/category-menu', { categories: categories }) %>
+            <%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors }) %>
+            <%- partial('plugins/github-repo', config.plugins.github) %>
+        </div>
     </div>
 </div><!-- /container -->
 
 <%- partial('plugins/disqus-comment-count', config.plugins.disqus) %>
-<%- partial('plugins/weather', config.plugins) %>

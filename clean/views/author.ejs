@@ -1,9 +1,5 @@
 <div class="container">
     <div class="row">
-        <div class="span3 side">
-			<%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors }) %>
-			<%- partial('plugins/category-menu', { categories: categories }) %>
-        </div>
         <div class="span9 articles">
             <div class="well">
                 <div class="page-header">
@@ -24,6 +20,10 @@
                     <% }) %>
                 </ul>
             </div>
+        </div>
+        <div class="span3 side">
+            <%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors }) %>
+            <%- partial('plugins/category-menu', { categories: categories }) %>
         </div>
     </div>
 </div><!-- /container -->
