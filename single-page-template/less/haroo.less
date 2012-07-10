@@ -1,0 +1,209 @@
+// HAROO PRESS
+// -----------
+body {
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	background: #222323;
+}
+.container-fluid {
+	padding: 0;
+}
+#header {
+	height: 50px;
+	background-color: #222323;
+
+	.brand {
+		display: block;
+		width: 180px;
+		height: 30px;
+		font-size: 0;
+		line-height: 0;
+		background: url(../img/logo.png) no-repeat 0 50%;
+	}
+
+	.nav-collapse {
+		float: right;
+		margin-top: 7px;
+		font-size: 12px;
+		color: #999;
+		text-transform: uppercase;
+
+		li.active a, a:hover {
+			color: #59c7e3;
+			background: none;
+		}
+	}
+}
+
+.main { 
+	padding-top: 50px;
+}
+
+.section {
+	padding: 50px 0 80px;
+	text-align: center;
+
+	& > h2 {
+		margin-bottom: .5em;
+		font: bold 18px/1 'Open Sans', Helvetica, sans-serif;
+		text-transform: uppercase;
+	}
+
+	& > h3 {
+		font: bold 36px/1 'Open Sans', Helvetica, sans-serif;
+		line-height: 1.1;
+	}
+}
+
+.about {
+	background: url(../img/bg-about.gif) repeat 0 0;
+	h2 { color: rgba(0, 0, 0, .34); }
+	h3 { color: #fff; }
+
+	.details {
+		margin-top: 30px;
+		padding-top: 410px;
+		font: italic 14px/1.4 'Droid Serif', serif;
+		text-align: left;
+		color: rgba(0, 0, 0, .6);
+		background: url(../img/about.gif) no-repeat 50% 0;
+
+		h4 {
+			margin-bottom: .5em;
+			font-style: normal;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.works {
+	background: url(../img/bg-works.gif) repeat 0 0;
+	h2 { color: rgba(255, 255, 255, .40); }
+	h3 { color: #fff; }
+
+	.carousel {
+		margin: 50px auto 0;
+		max-width: 870px;
+	}
+	.carousel-control {
+		line-height: 26px;
+		background-color: #1d1f1e;
+		border: none;
+		color: #fff;
+	}
+}
+
+.people {
+	background: url(../img/bg-people.gif) repeat 0 0;
+	h2 { color: rgba(0, 0, 0, .34); }
+	h3 { color: #fff; }
+
+	#tab {
+		margin-top: 50px;
+
+		> li {
+			width: 20%;
+
+			> a {
+				margin: 0;
+				padding: 0;
+				border: none;
+
+				&:hover {
+					background: none;
+
+					> img {
+						.opacity(70);
+					}
+				}
+			}
+		}
+	}
+
+	.tab-pane {
+		text-align: left;
+		font: italic 14px/1.4 'Droid Serif',serif;
+		color: rgba(0, 0, 0, 0.6);
+		
+		strong {
+			display: block;
+			margin-bottom: .5em;
+			text-transform: uppercase;
+			font-style: normal;
+		}
+
+		> a.twt, > a.mail {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			font-size: 0;
+			line-height: 0;
+			background: url(../img/icon.png) no-repeat 0 0;
+		}
+		> a.twt { background-position: 0 -90px; }
+		> a.mail { background-position: 0 -30px; }
+	}
+}
+
+.contact {
+	background: url(../img/bg-contact.gif) repeat 0 0;
+	h2 { color: rgba(0, 0, 0, .34); }
+	h3 { color: #fff; }
+
+	.details {
+		margin-top: 50px;
+		text-align: left;
+		color: #fff;
+
+		h4 {
+			margin-bottom: 1em;
+			font-size: 18px;
+		}
+
+		fieldset {
+			width: 90%;
+
+			input, textarea {
+				width: 100%;
+				font: bold italic 12px/1 'Droid Serif', serif;
+				color: rgba(0, 0, 0, .34);
+			}
+		}
+	}
+
+	.ct {
+		margin: 0;
+
+		> li {
+			padding-left: 30px;
+			list-style: none;
+			font: italic 16px/1.8 'Droid Serif', serif;
+			background: url(../img/icon.png) no-repeat 0 0;
+		}
+		
+		.phone { background-position: 0 7px; }
+		.mail { background-position: 0 -25px; }
+		.addr { background-position: 0 -58px; }
+	}
+
+	#submit {
+		padding: 1em 3em;
+		font: 14px/1 'Open Sans', sans-serif;
+		background-color: #393939;
+		border: none;
+		color: #fff;
+	}
+}
+
+#footer {
+	padding: .5em 0;
+	font-size: 12px;
+	background-color: #222323;
+	color: rgba(255, 255, 255, .6);
+
+	p {
+		margin-top: 10px;
+		text-align: center;
+	}
+}
+
+/* font-family: 'Droid Serif', serif; font-family: 'Open Sans', sans-serif;*/

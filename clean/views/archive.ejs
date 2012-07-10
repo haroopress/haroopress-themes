@@ -1,27 +1,5 @@
 <div class="container">
-    <div class="row">
-        <div class="span3 side">
-            <div id="author" class="well">
-                <h3 class="title">About Author</h3>
-                 <div class="gravatar">
-                    <img src="<%= archive.author._gravatar %>" />
-                </div>
-                <ul class="profile">
-                    <li class="nickname"><%= archive.author.head.name %></li>
-                    <li class="blog"><a href="<%= archive.author.head.blog %>" target="_blank"><%= archive.author.head.blog %></a></li>
-                    <li class="twitter"><a href="http://twitter.com/<%= archive.author.head.twitter %>" target="_blank">@<%= archive.author.head.twitter %></a></li>
-                    <li class="github"><a href="https://github.com/<%= archive.author.head.twitter %>" target="_blank"><%= archive.author.head.github %></li>
-                </ul>
-     
-                <p>
-                    <a href="https://twitter.com/<%= archive.author.head.twitter %>" class="twitter-follow-button" data-show-count="true">Follow @<%= archive.author.head.twitter %></a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                </p>
-                <%- archive.author.body %>
-            </div>
-            <%- partial('plugins/recents', { archives: archives }) %>
-            <%- partial('plugins/category-menu', { categories: categories }) %>
-        </div>
+    <div class="row">      
         <div class="span9 articles">
             <div class="row">
                 <div class="span9">
@@ -53,6 +31,29 @@
             </div>
             <div class="row">
             </div>
+        </div>
+
+        <div class="span3 side">
+            <div id="author" class="well">
+                <h3 class="title">About Author</h3>
+                 <div class="gravatar">
+                    <img src="<%= archive.author._gravatar %>" />
+                </div>
+                <ul class="profile">
+                    <li class="nickname"><%= archive.author.head.name %></li>
+                    <li class="blog"><a href="<%= archive.author.blog %>" target="_blank"><%= archive.author.head.blog %></a></li>
+                    <li class="twitter"><a href="http://twitter.com/<%= archive.author.twitter %>" target="_blank">@<%= archive.author.head.twitter %></a></li>
+                    <li class="github"><a href="https://github.com/<%= archive.author.twitter %>" target="_blank"><%= archive.author.head.github %></li>
+                </ul>
+     
+                <p>
+                    <a href="https://twitter.com/<%= archive.author.head.twitter %>" class="twitter-follow-button" data-show-count="true">Follow @<%= archive.author.head.twitter %></a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </p>
+                <%- archive.author.body %>
+            </div>
+            <%- partial('plugins/recents', { archives: archives }) %>
+            <%- partial('plugins/category-menu', { categories: categories }) %>
         </div>
     </div>
     <!--<div class="row">-->

@@ -13,9 +13,15 @@ a {
 a:hover, a:focus {
 	color: #5ea4c2;
 }
+::selection {
+	background-color: #a8d1ff;
+}
+::-moz-selection {
+	background-color: #a8d1ff;
+}
 .well p, .well ul, .well h1, .well h2, .well h3, .well h4, .well h5, .well h6 {
 	margin-bottom: 1.5em;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 1.6;
 }
 header.overview {
@@ -25,6 +31,7 @@ header.overview {
 	float: right;
 	margin: 19px 10px 0 0;
 }
+.well li { line-height: 1.6; }
 .side, .articles { 
 	margin-top: 80px; 
 }
@@ -43,6 +50,7 @@ header.overview {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	font-size: 12px;
 	border-bottom: 1px solid #d5d5d5;
 }
 .side > .recent .nav-list li a {
@@ -59,10 +67,24 @@ header.overview {
 }
 ._github_repo li {
 	font-size: 13px;
+	line-height: 1.8;
+}
+.fbbd {
+	width: 100%;
+}
+.fb_edge_widget_with_comment {
+	float: right;
+}
+.navbar {
+	border-top: 4px solid #b2b2b2;
 }
 .navbar-inner {
+	min-height: 40px;
 	background: url(../img/bg-body.gif) repeat 0 0;
 	box-shadow: none;
+	/* border-bottom: 1px dashed rgba(0, 0, 0, 0.3);*/
+}
+.navbar .container {
 	border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
 }
 .navbar .nav > li > a {
@@ -82,7 +104,7 @@ header.overview {
 	padding-top: 0;
 }
 #author p {
-	margin: 8px 0 0;
+	margin: 1.5em 0 0;
 	font-size: 13px;
 }
 #author a { 
@@ -99,7 +121,7 @@ header.overview {
 }
 #author .profile li {
 	padding: 1px 0;
-	font: normal 14px/1.5 'Rokkitt',serif;
+	font-size: 13px;
 	list-style: none;
 	border-bottom: 1px solid #d5d5d5;
 	background: url(../img/icon-social.png) no-repeat 0 0;
@@ -166,9 +188,9 @@ header.overview {
 .well .nav-list li {
 	margin: 0 0 5px;
 	padding: 1px 0;
-	font: bold 14px/1.5 'Rokkitt',serif;
 	text-align: right;
 	text-transform: uppercase;
+	font-size: 12px;
 }
 .well .nav-list .title {
 	margin-bottom: 1em;
@@ -191,8 +213,9 @@ header.overview {
 }
 .well h1 {
 	margin-bottom: 1em;
+	font-size: 16px;
+	color: #333;
 }
-.well li { line-height: 1.6; }
 .side .title {
 	margin-bottom: 1em;
 	font-family: Helvetica;
@@ -241,7 +264,7 @@ header.overview {
 }
 .page-header > .meta {
 	margin-bottom: 10px;
-	font: bold 11px/1.5 "Helvetica";
+	font: bold 12px/1.5 "Helvetica";
 	text-transform: uppercase; 
 	color:#000;
 }
@@ -394,13 +417,15 @@ footer .backtotop {
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAPCAYAAADQ4S5JAAAAbklEQVR42rXQQQ2AMAyF4UlAAhKQUAlImAQcTcIkVMKk7LwDGYXQlBCgXciWfLf+yfLcWkog9TQ77R2HArsHicCLQQKbJIEdtAbjPcgEH0Se/P9K9kB4LUBSFZksHEDLShx5YzBdvwYkfhyH/W4DE9/ZmOSEIuQAAAAASUVORK5CYII=);
 }
 .social > a.rss {
-	/*background-position: -34px 0;*/
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAwElEQVR42p2S0Q3DIAxEGYERMgIjeISMwCjdoCN4FEboCBmB73xULUiXnmUR0cTSfQC6pzuLcMx736XpA21N2u/CbDxgoNKUroBSU4bRgh4zY0QKcaleBqL/VqjYQcSbTpMgOmMTtA4gMquSYYYBENYpI+PS43XzD0RD5Y5OUthHGBNM1S7Q1NRRArUQ3OcjhTtv58sEhHUY274HQyxQcht/utirA8bgv62pIwaYcF5wFogA9r44jMvOdyCx6473C1wu9X1jC7RMAAAAAElFTkSuQmCC);
 }
 .footer {
 	margin-top: 6em;
 	font-size: 12px;
 	line-height: 1.7;
+}
+.footer > .container {
+	border-top: 3px solid rgba(0, 0, 0, 0.3);
 }
 .footer a {
 	text-decoration: none;

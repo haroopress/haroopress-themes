@@ -1,11 +1,5 @@
 <div class="container">
     <div class="row">
-        <div class="span3 side">
-            <%- partial('plugins/intro', config) %>
-            <%- partial('plugins/category-menu', { categories: categories }) %>
-            <%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors }) %>
-            <%- partial('plugins/github-repo', config.plugins.github) %>
-        </div>
         <div class="span9 articles">
             <% //for(var id in archives) {
                 for(var id = 0; id < dates.serialize.length; id++) {
@@ -15,14 +9,14 @@
                 <div class="span9">
                     <div class="well">
                         <div class="page-header">
-                            <p class="meta">
-                                Javascript <!-- 임시 카테고리 -->
-                                <span class="time"><!-- %= article.head.published % -->04.05.2012</span>
-                            </p>
                             <h1>
                                 <img src="<%= article.author._gravatar %>" width="50" class="thumb" />
                                 <a href="/post/<%= article._file %>"><%= article.head.title %></a>
                             </h1>
+                            <p class="meta">
+                                <span class="time"><%= article.head.published %></span>
+                                in Javascript <!-- 임시 카테고리 -->
+                            </p>
                         </div>
                         <div>
                             <%- article.html %>
@@ -36,8 +30,13 @@
             </div>
             <% } %>
         </div>
+        <div class="span3 side">
+            <%- partial('plugins/intro', config) %>
+            <%- partial('plugins/category-menu', { categories: categories }) %>
+            <%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors }) %>
+            <%- partial('plugins/github-repo', config.plugins.github) %>
+        </div>
     </div>
 </div><!-- /container -->
 
 <%- partial('plugins/disqus-comment-count', config.plugins.disqus) %>
-<%- partial('plugins/weather', config.plugins) %>
