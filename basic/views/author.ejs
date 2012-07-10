@@ -1,8 +1,8 @@
 <div class="container page-author">
     <div class="row">
         <div class="span3">
-			<%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors }) %>
-			<%- partial('plugins/category-menu', { categories: categories }) %>
+            <%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors, authorsOrder: authorsOrder }) %>
+            <%- partial('plugins/category-menu', { categories: categories }) %>
         </div>
         <div class="span9">
             <div class="well bg">

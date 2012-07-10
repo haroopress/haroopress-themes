@@ -1,16 +1,24 @@
     <% if(contributors.display) { %>
     <div class="well contributors">
-		<div class="pull-right">
-			<a href="/authors"><i class=" icon-info-sign"></i></a>
-		</div>
+        <div class="pull-right">
+            <a href="/authors"><i class=" icon-info-sign"></i></a>
+        </div>
         <h6>contributors</h6>
-        <% for(var id in authors) {
-            var author = authors[id];
+        <%
+            var i = 0, len;
+
+            len = contributors.count || authorsOrder.length;
+            if(len > authorsOrder.length) {
+                len = authorsOrder.length;
+            }
+
+            for(i; i < len; i++) {
+                var author = authorsOrder[i];
         %>
         <div class="row-fluid">
             <a class="pull-left" href="/authors/<%= author.head.name %>" title="<%= author.head.body %>">
-				<img src="<%= author._gravatar %>" />
-			</a>
+                <img src="<%= author._gravatar %>" />
+            </a>
             <p>
                 <strong><%= author.head.name %></strong><br/>
                 <a href="https://twitter.com/#!/<%= author.head.twitter %>" target="_blank">@<%= author.head.twitter %></a>
