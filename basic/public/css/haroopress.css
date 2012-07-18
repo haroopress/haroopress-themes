@@ -41,6 +41,11 @@
     margin-top: 14px;
 }
 
+.markdown blockquote p {
+    font-size: 1em;
+    font-style: italic;
+}
+
 /**
  * categories
  */
