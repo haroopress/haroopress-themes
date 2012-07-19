@@ -40,6 +40,10 @@
 .markdown h3 {
     margin-top: 14px;
 }
+.markdown blockquote p {
+    font-size: 1em;
+    font-style: italic;
+}
 
 /**
  * categories
@@ -96,3 +100,6 @@
     margin-top: -23px;
     background-image: url(/img/bookmark-ribbon-iPad.png);
 }
+
+
+/* main page */
