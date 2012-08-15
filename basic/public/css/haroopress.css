@@ -3,7 +3,7 @@
  */
 .page-main, .page-archive, .page-archives,
 .page-author, .page-authors, .page-category,
-.page-categories, .page-page {
+.page-categories, .page-slides, .page-page {
     margin-top: 70px;
 }
 
@@ -39,6 +39,11 @@
 
 .markdown h3 {
     margin-top: 14px;
+}
+
+.markdown blockquote p {
+    font-size: 1em;
+    font-style: italic;
 }
 
 /**
