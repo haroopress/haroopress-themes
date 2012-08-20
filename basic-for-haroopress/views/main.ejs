@@ -65,12 +65,12 @@
                 <p>트위터 부트스트랩을 기반으로 테마 구조가 잡혀있어 개발자스러운 테마를 손 쉽게 적용할 수 있을 뿐아니라 만들 수도 있습니다. (<a href="#theme">테마 목록</a>)</p>
             </div>
             <div class="span4">
-                <h2><span class="icon-beaker"></span> 다양한 플러그인</h2>
-                <p>트위터, 페이스북, 구글플러스, 깃허브등의 소셜라이징을 위한 플러그인 뿐만 아니라 하루프레스의 기본 레이아웃 구성요소를 제외한 대부분이 플러그인 아키텍쳐내에서 동작합니다.</p>
-            </div>
-            <div class="span4">
                 <h2><span class="icon-check-empty"></span> 웹 슬라이드</h2>
                 <p>간단한 마크다운 문서가 멋진 웹 슬라이드로 재 탄생하게 됩니다. 뿐만아니라 언제 어디서든지 웹을 통한 멋진 프리젠테이션이 가능합니다. (<a href="/slides/welcome-to-haroopress-slide" target="_blank">예제</a>)</p>
+            </div>
+            <div class="span4">
+                <h2><span class="icon-beaker"></span> 다양한 플러그인</h2>
+                <p>트위터, 페이스북, 구글플러스, 깃허브등의 소셜라이징을 위한 플러그인 뿐만 아니라 하루프레스의 기본 레이아웃 구성요소를 제외한 대부분이 플러그인 아키텍쳐내에서 동작합니다.</p>
             </div>
         </div>
         <div class="row bottom20">
@@ -84,29 +84,7 @@
             </div>
             <div class="span4">
                 <h2><span class="icon-cloud"></span> 언제 어디서나 블로깅</h2>
-                <p>Git 유저라면 Github 나 Bitbucket 을 통해서, 일반 유저라면 Dropbox 동기화를 통해서 언제 어디서든지 블로깅을 할 수 있습니다. (<a href="">Git</a>, <a href="">Bitbucket</a>, <a href="">Dropbox</a>)</p>
-            </div>
-        </div>
-
-        <div class="row bottom">
-            <div class="span3">
-                <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
-                <h2>오픈소스</h2>
-                <p><a href="http://rhiokim.mit-license.org/" target="_blank">MIT 라이센스</a>를 적용한 오픈소스입니다.</p>
-            </div>
-            <div class="span3">
-                <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_163_iphone.png">-->
-                <h2>마크다운</h2>
-                <p>사용자가 생산한 모든 콘텐츠는 마크다운 포맷만 지원합니다. (<a href="http://daringfireball.net/projects/markdown/" target="_blank">마크다운이란?</a>)</p>
-            </div>
-            <div class="span3">
-                <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_079_podium.png">-->
-                <h2>자바스크립트</h2>
-                <p>모든 코드가 자바스크립트로 작성되었습니다.</p>
-            </div>
-            <div class="span3">
-                <h2><span class="icon-globe"></span> 크로스플랫폼 지원</h2>
-                <p>윈도우, 리눅스, 맥에서 동일하게 지원될 예정입니다.
+                <p>Git 유저라면 Github 나 Bitbucket 을 통해서, 일반 유저라면 Dropbox 동기화를 통해서 언제 어디서든지 블로깅을 할 수 있습니다. (<a href="/post/haroopress-dropbox-synchronous/">Dropbox</a>)</p>
             </div>
         </div>
     </div>
@@ -126,7 +104,7 @@
                     하루프레스는 모두 노드를 기반으로 한 자바스크립트 코드로 작성되었습니다. 그래서 하루프레스를 이용하기 위해서는 노드 최신버젼을 설치해 주어야 합니다.
 
                     <a href="http://nodejs.org" target="_blank">노드 공식 사이트</a>를 통해 설치 방법과 레퍼런스를 찾아볼 수 있습니다.
-                    <blockquote>하루프레스는 노드 <code>v0.6.12</code> 버젼으로 개발되어졌습니다.</blockquote>
+                    <blockquote>하루프레스는 노드 <code>v0.6.12</code> 버젼으로 개발되어졌고 <code>v0.8.7</code> 까지 테스트 되었습니다.</blockquote>
                     <img src="/img/intro/nodejs.png" />
                 </p>
 
@@ -211,11 +189,10 @@ haroo> Input article tag (e.g tag1, tag2, tag3) : 태그 ¶
 haroo> 파일 및 디렉토리 생성 정보</code></pre>
 
                     <h5>새로운 페이지</h5>
-                    <pre><code>$ <strong>make new-post</strong>
-haroo> Input page title : 페이지 제목 ¶
-haroo> Input page category : 카테고리 ¶
-haroo> Input page tag (e.g tag1, tag2, tag3) : 태그 ¶
-haroo> 파일 및 디렉토리 생성 정보</code></pre>
+                    <pre><code>$ <strong>make new-post</strong></code></pre>
+
+                    <h5>새로운 웹슬라이드</h5>
+                    <pre><code>$ <strong>make new-slide</strong></code></pre>
                </p>
             </div>
             <div class="span4">
@@ -319,7 +296,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
             <li class="span4">
                 <a class="thumbnail" href="http://frends.kr/" target="_blank" title="노드 닌자그룹">
                     <img src="img/sites/frends.kr-320.png" alt="frends.kr">
-                    <div class="caption">폐쇄적인 프론트앤드 해커 그룹</div>
+                    <div class="caption">프론트앤드 해커 그룹</div>
                 </a>
             </li>
             <li class="span4">
@@ -339,6 +316,83 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
 
     <hr class="soften">
 
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>  
+    <div class="row">
+        <div class="span6">
+            <h2><span class="icon-group"></span> Community Reaction</h2>
+
+            <script>
+                new TWTR.Widget({
+                  version: 2,
+                  type: 'search',
+                  search: '#haroopress_refs',
+                  interval: 6000,
+                  title: 'What do they say about haroopress',
+                  subject: 'haroopress related tweets',
+                  width: 460,
+                  height: 364,
+                  theme: {
+                    shell: {
+                      background: 'transparent',
+                      color: '#333'
+                    },
+                    tweets: {
+                      background: 'transparent',
+                      color: '#333',
+                      links: '#c10000'
+                    }
+                  },
+                  features: {
+                    scrollbar: false,
+                    loop: true,
+                    live: true,
+                    hashtags: true,
+                    timestamp: true,
+                    avatars: true,
+                    toptweets: true,
+                    behavior: 'default'
+                  }
+                }).render().start();
+            </script>
+        </div>
+        <div class="span6">
+            <h2><span class="icon-twitter"></span> SNS Reaction</h2>
+            <script>
+                new TWTR.Widget({
+                  version: 2,
+                  type: 'search',
+                  search: 'haroopress OR 하루프레스',
+                  interval: 6000,
+                  title: 'What do they say about haroopress',
+                  subject: 'haroopress related tweets',
+                  width: 460,
+                  height: 364,
+                  theme: {
+                    shell: {
+                      background: 'transparent',
+                      color: '#333'
+                    },
+                    tweets: {
+                      background: 'transparent',
+                      color: '#333',
+                      links: '#c10000'
+                    }
+                  },
+                  features: {
+                    scrollbar: false,
+                    loop: true,
+                    live: true,
+                    hashtags: true,
+                    timestamp: true,
+                    avatars: true,
+                    toptweets: true,
+                    behavior: 'default'
+                  }
+                }).render().start();
+            </script>
+        </div>
+    </div>
+    <hr>
     <div class="roadmap">
         <div class="row">
             <div class="span4">
@@ -347,7 +401,6 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
                      <ul class="unstyled">
                         <li><span class="icon-plus"></span> 다국어를 지원</li>
                         <li><span class="icon-plus"></span> 마크다운 프리젠테이션 플러그인</li>
-                        <li><span class="icon-plus"></span> 크로스 플랫폼(Mac OS X, Window 7, Ubuntu 등)</li>
                         <li><span class="icon-plus"></span> 데이터 컨버터 (워드프레스, 블로거, 텀블러 등)</li>
                         <li><span class="icon-plus"></span> Heroku 배포와 Rsync 방식 배포 지원</li>
                         <li><span class="icon-plus"></span> 템플릿 엔진과 테마 기능 고도화</li>
