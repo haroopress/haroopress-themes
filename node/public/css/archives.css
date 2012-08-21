@@ -2,7 +2,7 @@
 .comment {
     overflow: hidden;
     padding: 0 0 1em;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #282B21;
     margin: 0 0 1em;
     *zoom: 1;
     margin:  18px 0 18px 0;
@@ -25,9 +25,9 @@
 
 .comment .text {
     padding: 10px;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #282B21;
     border-radius: 5px;
-    background: #fff;
+    background: #393C32;
 }
 
 .comment .text p:last-child {
@@ -65,7 +65,7 @@
 .comment:before {
     width: 9px;
     height: 9px;
-    border: 3px solid #fff;
+    border: 3px solid #282B21;
     border-radius: 100px;
     margin: 16px 0 0 -6px;
     box-shadow: 0 1px 1px rgba(0,0,0,0.2), inset 0 1px 1px rgba(0,0,0,0.1);
@@ -83,8 +83,8 @@
     height: 9px;
     border-width: 0 0 1px 1px;
     border-style: solid;
-    border-color: #e5e5e5;
-    background: #fff;
+    border-color: #282B21;
+    background: #393C32;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
