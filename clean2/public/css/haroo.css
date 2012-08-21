@@ -282,6 +282,9 @@ header.overview {
 	text-transform: uppercase;
 	font: 14px/1.5 'Rokkitt',serif;
 }
+.articles .markdown img {
+    max-width: 100%;
+}
 .articles .meta .cmt {
 	float: left;
 	padding: 5px 1px 3px;
