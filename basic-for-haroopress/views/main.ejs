@@ -103,7 +103,7 @@
                 <p>
                     하루프레스는 모두 노드를 기반으로 한 자바스크립트 코드로 작성되었습니다. 그래서 하루프레스를 이용하기 위해서는 노드 최신버젼을 설치해 주어야 합니다.
 
-                    <a href="http://nodejs.org" target="_blank">노드 공식 사이트</a>를 통해 설치 방법과 레퍼런스를 찾아볼 수 있습니다.
+                    <a href="http://nodejs.org" target="_blank">노드 공식 사이트</a>를 통해 설치방법과 레퍼런스를 얻을 수 있지만 <a href="https://github.com/creationix/nvm" target="_blank"><strong>nvm</strong></a> 와 같은 노드 버젼 메니저를 사용하기를 권장합니다. 
                     <blockquote>하루프레스는 노드 <code>v0.6.12</code> 버젼으로 개발되어졌고 <code>v0.8.7</code> 까지 테스트 되었습니다.</blockquote>
                     <img src="/img/intro/nodejs.png" />
                 </p>
@@ -122,6 +122,11 @@
             </div>
             <div class="span6">
                 <h2><span class="icon-wrench"></span> 설치</h2>
+                <h5>쉬운 설치</h5>
+                <pre>
+<code>$ curl http://haroopress.com/install.sh | sh
+</code></pre>
+
                 <h5>소스를 이용한 설치</h5>
                 <pre>
 <code>$ <strong>git clone git@github.com:rhiokim/haroopress /path/to/yourblog.com</strong>
@@ -326,7 +331,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
                   version: 2,
                   type: 'search',
                   search: '#haroopress_refs',
-                  interval: 6000,
+                  interval: 60000,
                   title: 'What do they say about haroopress',
                   subject: 'haroopress related tweets',
                   width: 460,
@@ -361,7 +366,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
                 new TWTR.Widget({
                   version: 2,
                   type: 'search',
-                  search: 'haroopress OR 하루프레스',
+                  search: 'haroopress -haroopress_ref OR 하루 프레스',
                   interval: 6000,
                   title: 'What do they say about haroopress',
                   subject: 'haroopress related tweets',
