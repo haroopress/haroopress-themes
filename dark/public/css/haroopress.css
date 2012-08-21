@@ -202,6 +202,10 @@ a, a:hover, #author a, .contributors a {
     color: #99948f;
     border-bottom: 1px solid #333;
 }
+
+.markdown img {
+    max-width: 100%;
+}
 .article .more, .article .cmt, .archives-body .more {
     color: #24befc;
     font-style: italic;

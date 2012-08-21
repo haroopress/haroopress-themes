@@ -251,6 +251,9 @@ header.overview {
 	background: url(../img/bg-tag.gif) repeat-x left bottom;
 	text-align: right;
 }
+.articles .markdown img {
+    max-width: 100%;
+}
 .articles .meta .cmt {
 	float: left;
 	padding: 5px 1px 3px;

@@ -81,6 +81,9 @@ code, code span{
     font-size: 1em;
     font-style: italic;
 }
+.markdown img {
+    max-width: 100%;
+}
 
 /**
  * categories
