@@ -1,0 +1,59 @@
+<div class="container page-archive">
+    <div class="row">
+        <div class="span9 main">
+            <div class="well article">
+                <% if(archive.head.important) { %><div class="pull-right bookmark"></div><% } %>
+                <h1><%= archive.head.title %></h1>
+
+                <%- partial('plugins/facebook', config.plugins.facebook) %>
+                <%- partial('plugins/google-plus', { config: config.plugins.google, archive: archive }) %>
+                <%- partial('plugins/twitter', { config: config, archive: archive }) %>
+
+                <div class="markdown">
+                    <%- archive.html %>
+                </div>
+                <%- partial('plugins/prev-next', { prev: archive.prev, next: archive.next }) %>
+
+                <div class="row">
+                    <div class="span8 disqus">
+                        <%- partial('plugins/disqus', config.plugins.disqus) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span3 side">
+            <div id="author" class="well">
+                <h3 class="title">About Author</h3>
+                <p class="gravatar">
+                    <img src="<%= archive.author._gravatar %>" />
+                </p>
+                <p>
+                    <span class="info">name: <%= archive.author.head.name %></span>
+                    <span class="info">blog: <a href="<%= archive.head.author.blog %>" target="_blank"><%= archive.author.head.blog %></a></span>
+                    <span class="info">twitter: <a href="http://twitter.com/<%= archive.head.author.twitter %>" target="_blank">@<%= archive.author.head.twitter %></a></span>
+                    <span class="info">github: <a href="https://github.com/<%= archive.head.author.twitter %>" target="_blank"><%= archive.author.head.github %></a></span>
+                </p>
+                <p>
+                    <a href="https://twitter.com/<%= archive.author.head.twitter %>" class="twitter-follow-button" data-show-count="true">Follow @<%= archive.author.head.twitter %></a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </p>
+                <%- archive.author.body %>
+            </div>
+            <div class="well">
+                <h3 class="title">About this Article</h3>
+                <h5>Date Released:</h5>
+                <span><%= archive.head.published %></span>
+            </div>
+            <%- partial('plugins/category-menu', { categories: categories }) %>
+            <%- partial('plugins/recents', { config: config.recents, dates: dates }) %>
+        </div>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="offset3 span9">-->
+            <!--<strong>tags</strong> :-->
+            <!--<% archive.head.tags.forEach(function(tag) { %>-->
+            <!--<a href="/tag/<%= tag %>"><%= tag %></a>&nbsp;-->
+            <!--<% }) %>-->
+        <!--</div>-->
+    <!--</div>-->
+</div><!-- /container -->

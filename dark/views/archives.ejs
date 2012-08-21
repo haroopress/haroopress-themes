@@ -1,0 +1,51 @@
+<div class="container page-archives">
+    <div class="row">
+        <div class="span12">
+            <div class="row">
+                <div class="span9 main">
+                    <div class="well archives">
+                        <h1>Blog Archives</h1>
+                    <%
+                        var y, m, d, year, month, day;
+                        dates.index.forEach(function(item) {
+                            y = item[0];
+                            year = item[1];
+                    %>
+                        <%
+                            year.forEach(function(item) {
+                                m = item[0];
+                                month = item[1];
+                        %>
+                        <h2><%= y %>-<%= m %></h2>
+                        <%
+                            month.forEach(function(item) {
+                                d = item[0];
+                                day = item[1];
+                        %>
+                        <%
+                            day.forEach(function(archive) {
+                        %>
+                        <div class="archives-list clearfix">
+                            <a class="archives-img" href="/authors/<%= archive.author.head.name %>">
+                                <img src="<%= archive.author._gravatar %>" alt="<%= archive.author.head.name %>" width="50" height="50">
+                            </a>
+                            <div class="archives-body">
+                                <p><%= archive.head.title %>... <a href="/post/<%= archive._file %>" class="more">read</a></p>
+                                <p class="attribution">by <a href="/authors/<%= archive.author.head.name %>" ><%= archive.author.head.name %></a> at <%= archive._printDate %></p>
+                            </div>
+                        </div>
+                        <% }) %>
+                        <% }) %>
+                    <% }) %>
+                <% }) %>
+                    </div>
+                </div>
+                <div class="span3 side">
+                    <%- partial('plugins/category-menu', { categories: categories }) %>
+                    <%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors, authorsOrder: authorsOrder }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- /container -->
+​

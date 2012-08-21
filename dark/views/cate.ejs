@@ -1,0 +1,26 @@
+<div class="container page-category">
+    <div class="row">
+        <div class="span9 main">
+            <div class="well article">
+                <h1>Topic : <%= cates[0] && cates[0].head.categories %></h1>
+                <div class="row">
+                    <div class="span9">
+                        <ul>
+                    <% cates.forEach(function(article) { %>
+                            <li>
+                                <h3>
+                                    <a href="/post/<%= article._file %>"><%= article.head.title %></a> <small>by <%= article.head.author %></small>
+                                </h3>
+                            </li>
+                    <% }); %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span3 side">
+            <%- partial('plugins/category-menu', { categories: categories }) %>
+            <%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors, authorsOrder: authorsOrder }) %>
+        </div>
+    </div>
+</div><!-- /container -->

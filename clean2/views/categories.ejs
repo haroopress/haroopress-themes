@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="span3 side">
+            <%- partial('plugins/category-menu', { categories: categories }) %>
+            <%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors, authorsOrder: authorsOrder }) %>
+        </div>
+        <div class="span9 articles">
+            <div class="well">
+                <div class="page-header">
+                    <h1>Categories</h1>
+                </div>
+            <% for(var cate in categories) { %>
+                <h2 class="title"><%= cate %></h2>
+                <div class="archives">
+                <% categories[cate].forEach(function(archive) { %>
+                    <div class="archive">
+                        <a class="img" href="/authors/<%= archive.author.head.name %>">
+                            <img src="<%= archive.author._gravatar %>" alt="" width="50" height="50">
+                        </a>
+                        <div class="bd">
+                            <h3><a href="/post/<%= archive._file %>"><%= archive.head.title %></a></h3>
+                            <small>by <%= archive.author.head.name %> / <%= archive.head.published %></small>
+                        </div>
+                    </div>
+                <% }) %>
+                </div>
+            <% } %>
+            </div>
+        </div>
+    </div>
+</div><!-- /container -->

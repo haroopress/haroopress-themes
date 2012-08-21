@@ -1,0 +1,24 @@
+    <% if(contributors.display) { %>
+    <div class="well contributors">
+        <h6 class="title"><a href="/authors">contributors</a></h6>
+        <%
+            var i = 0, len;
+
+            len = contributors.count || authorsOrder.length;
+            if(len > authorsOrder.length) {
+                len = authorsOrder.length;
+            }
+
+            for(i; i < len; i++) {
+                var author = authorsOrder[i];
+        %>
+        <div class="row-fluid contributor">
+            <a href="/authors/<%= author.head.name %>" title=""><img src="<%= author._gravatar %>" /></a>
+            <p>
+                <strong><%= author.head.name %></strong><br>
+                <span>@<%= author.head.twitter %></span>
+            </p>
+        </div>
+        <% } %>
+    </div>
+    <% } %>

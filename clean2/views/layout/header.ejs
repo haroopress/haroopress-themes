@@ -1,0 +1,42 @@
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="social">
+                <%
+                    var twitter = config.plugins.twitter;
+                    if(twitter.display && twitter.user) { %>
+                    <a class="twitter" href="http://twitter.com/<%= config.plugins.twitter.user %>" target="_blank">Twitter</a>
+                <% } %>
+                <a class="rss" href="/rss.xml">RSS</a>
+            </div>
+            
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/archives">Archives</a>
+                    </li>
+                    <% for(var id in pages) {
+                        var page = pages[id];
+                        if(page.head.status == 'draft') { continue; }
+                    %>
+                    <li>
+                        <a href="<%= page._path %>"><%= page.head.title %></a>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+            <form action="/search" id="search">
+                <input type="text" value="" placeholder="Search" name="q" id="search-text" class="placeholder">
+            </form>
+        </div>
+    </div>
+</div>

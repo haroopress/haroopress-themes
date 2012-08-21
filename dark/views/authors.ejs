@@ -1,0 +1,33 @@
+<div class="container page-authors">
+    <div class="row">
+        <div class="span9 main">
+            <div class="row">
+                <div class="span9">
+                    <div class="well article">
+                        <h1>Authors</h1>
+                        <div class="markdown">
+                            <ul class="thumbnails">
+                                <% for(var author in authors) { %>
+                                <li class="thumbnail">
+                                    <a href="/authors/<%= authors[author].head.name %>">
+                                        <img src="<%= authors[author]._gravatar.replace('128.jpg', '175.jpg') %>"/>
+                                    </a>
+                                    <div class="caption">
+                                        <p><%= authors[author].head.name %>
+                                        ( <%= authors[author].archives.length %> )</p>
+                                        <a href="https://twitter.com/<%= authors[author].head.twitter %>" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false">Follow @<%= authors[author].head.twitter %></a>
+                                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                                    </div>
+                                </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span3 side">
+            <%- partial('plugins/category-menu', { categories: categories }) %>
+        </div>
+    </div>
+</div><!-- /container -->

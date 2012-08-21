@@ -1,12 +1,10 @@
 body {
-    font-family: 'Magra', AppleSDGothicNeo, sans-serif;
-    font-size: 12px;
     background: url(/img/document-bg.jpg);
     background-attachment: fixed;
 }
 
-p, h1, h2, h3, h4, h5, h6, ul, li {
-    font-family: 'Magra', AppleSDGothicNeo, sans-serif;
+*, p, h1, h2, h3, h4, h5, h6, ul, li {
+    font-family: AppleSDGothicNeo-Medium, sans-serif;
 }
 
 header {
@@ -69,7 +67,12 @@ footer {
 }
 
 .markdown p {
-    line-height: 20px;
+    line-height: 2em;
+}
+
+.markdown blockquote p {
+    font-size: 1em;
+    font-style: italic;
 }
 
 .bookmark {
