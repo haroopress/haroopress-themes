@@ -1,0 +1,13 @@
+<div class="well recent">
+    <h6 class="title">Recent Articles</h6>
+    <ul class="nav nav-list">
+    <% for(var prop in archives) {
+          archive = archives[prop];
+    %>
+        <li>
+            <a href="/post/<%= archive._file %>" target="_blank"><%= archive.head.title %></a>
+
+        </li>
+    <% } %>
+    </ul>
+</div>

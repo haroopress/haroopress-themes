@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="span3 side">
+			<%- partial('plugins/contributors', { contributors: config.plugins.contributors, authors: authors, authorsOrder: authorsOrder }) %>
+			<%- partial('plugins/category-menu', { categories: categories }) %>
+        </div>
+        <div class="span9 articles">
+            <div class="well">
+                <div class="page-header">
+                    <h1>
+                        <img src="<%= author._gravatar %>" width="50" class="thumb" />
+                        <%= author.head.name %>'s Articles
+                    </h1>
+                </div>
+
+                <ul class="lists">
+                    <% author.archives.forEach(function(archive) { %>
+                    <li>
+                        <h3>
+                            <a href="/post/<%= archive._file %>"><%= archive.head.title %></a>
+                        </h3>
+                        <small>at <%= archive.head.published %></small>
+                    </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div><!-- /container -->

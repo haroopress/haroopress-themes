@@ -8,8 +8,8 @@
 <div class="container">
     <div class="row">
         <div class="span3">
-			<%- partial('plugins/category-menu', { categories: categories }) %>
-            <%- partial('plugins/recents', { archives: archives }) %>
+            <%- partial('plugins/category-menu', { categories: categories }) %>
+            <%- partial('plugins/recents', { config: config.recents, dates: dates }) %>
             <%- partial('plugins/favorites', favorites) %>
         </div>
         <div class="span9">
