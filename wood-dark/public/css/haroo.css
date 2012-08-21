@@ -74,7 +74,9 @@ footer {
     font-size: 1em;
     font-style: italic;
 }
-
+.markdown img {
+    max-width: 100%;
+}
 .bookmark {
     width: 38px;
     height: 68px;

@@ -76,7 +76,9 @@ footer {
 .markdown p {
     line-height: 20px;
 }
-
+.markdown img {
+    max-width: 100%;
+}
 .bookmark {
     width: 38px;
     height: 68px;
