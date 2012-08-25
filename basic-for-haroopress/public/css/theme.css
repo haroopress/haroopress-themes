@@ -1,3 +1,8 @@
+/* */
+a.icon-twitter, a.icon-rss {
+    margin: 10px 3px;
+}
+
 /* inherit */
 .page-main {
     margin-top: 0;
@@ -154,7 +159,8 @@ hr.soften {
 
 /* twitter search widget */
 /* http://www.1stwebdesigner.com/css/customize-twitter-search-widgets/ */
-.span6 .twtr-widget { width: 460px; }
+.span6 .twtr-widget { width: 100%; }
+.span6 .twtr-doc { width: 100% !important; }
 .twtr-widget {
     float: left;
     width: 380px;
