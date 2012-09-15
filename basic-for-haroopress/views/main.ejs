@@ -5,7 +5,7 @@
 
             <p class="lead">
                 5분만에 설치하는 블로그 엔진!, 웹 서버와 데이터베이스가 필요없는 초 간편 컨텐츠 메니징 시스템(CMS)! <br>
-                다양한 테마, 플러그인, 마크다운 포맷, 데이터 변환 유틸(옥토프레스, 워드프레스 등)<br>
+                다양한 테마, 웹 슬라이드, 플러그인, 마크다운 포맷, 데이터 변환 유틸<br>
             </p>
 
             <p><strong>알림! :</strong> 하루프레스는 사용자 여러분의 피드백과 후원,기부를 기다립니다.</p>
@@ -36,7 +36,8 @@
     <div class="row download-info">
         <div class="span12">
             <a href="http://github.com/rhiokim/haroopress" class="btn btn-danger btn-large" onclick="_gaq.push(['_trackEvent', 'intro actions', 'GitHub Project', 'View project on GitHub']);"><span class="icon-eye-open"></span> View Haroopress on Github</a>
-            <a href="https://github.com/rhiokim/haroopress/zipball/master" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'intro actions', 'Download', 'Download <%= config.meta.version %>']);"><span class="icon-download"></span> Download Haroopress <small>(v<%= config.meta.version %>)</small></a>
+
+            <!--a href="https://github.com/rhiokim/haroopress/zipball/master" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'intro actions', 'Download', 'Download <%= config.meta.version %>']);"><span class="icon-download"></span> Download Haroopress <small>(v<%= config.meta.version %>)</small></a-->
         </div>
     </div>
 
@@ -101,20 +102,20 @@
             <div class="span6">
                 <h2><span class="icon-book"></span> 설치 요구사항</h2>
                 <p>
-                    하루프레스는 모두 노드를 기반으로 한 자바스크립트 코드로 작성되었습니다. 그래서 하루프레스를 이용하기 위해서는 노드 최신버젼을 설치해 주어야 합니다.
+                    하루프레스는 노드를 기반하여 모든 소스코드가 자바스크립트로 작성되었습니다. 하루프레스를 이용하기 위해서는 노드 최신버젼을 설치해 주어야 합니다.
 
-                    <a href="http://nodejs.org" target="_blank">노드 공식 사이트</a>를 통해 설치방법과 레퍼런스를 얻을 수 있지만 <a href="https://github.com/creationix/nvm" target="_blank"><strong>nvm</strong></a> 와 같은 노드 버젼 메니저를 사용하기를 권장합니다. 
-                    <blockquote>하루프레스는 노드 <code>v0.6.12</code> 버젼으로 개발되어졌고 <code>v0.8.7</code> 까지 테스트 되었습니다.</blockquote>
-                    <img src="/img/intro/nodejs.png" />
+                    <a href="http://nodejs.org" target="_blank">노드 공식 사이트</a>를 통해 설치방법과 레퍼런스를 얻을 수 있습니다. 하루프레스를 사용하시려면 <a href="https://github.com/creationix/nvm" target="_blank"><strong>nvm</strong></a> 와 같은 노드 버젼 메니저를 사용하기를 권장합니다. 
+                    <blockquote>하루프레스는 노드 <code>v0.6.12</code> 버젼으로 개발되어졌고 <code>v0.8.8</code> 까지 테스트 되었습니다.</blockquote>
+                    <a href="http://nodejs.org/" target="_blank"><img src="/img/intro/nodejs.png" /></a>
                 </p>
 
                 <p>
-                    하루프레스는 총 6가지의 오픈소스로 개발되었고 대부분의 오픈소스가 모두 Github.com 을 통해 관리 되어지고 있어 이것들을 서브모듈로 관리되어지고 있습니다. <a href="http://nodejs.org/" target="_blank">Node</a>,<a href="http://git-scm.org/" target="_blank">Git</a>
+                    하루프레스는 총 <a href="http://localhost:8081/post/opensource-with-haroopress">20여가지의 오픈소스와 2가지의 오픈 스펙</a>을 기반으로 개발되었고 대부분의 오픈소스가 모두 Github.com 을 통해 관리 되어지고 있어 하루프레스는 이것들을 서브모듈로 사용하고 있습니다. 
 
-                    <br/><img src="/img/intro/git.png" />
+                    <br/><br/><a href="http://git-scm.org/" target="_blank"><img src="/img/intro/git.png" /> </a><a href="http://git-scm.org/" target="_blank"><img src="/img/intro/github.png" /></a>
                 </p>
                 <p>
-                    또한 하루프레스가 생성하는 정적 페이지를 웹에서 확인하기 위해서는 Github.com 에 본인의 계정과 공개(Public)된 저장소가 존재해야 합니다.
+                    또한 <strong><u>하루프레스가 생성하는 정적 페이지를 웹에서 확인하기 위해서는 Github.com 에 본인의 계정과 공개(Public)된 저장소</u></strong>가 존재해야 합니다. (<a href="http://localhost:8081/post/haroopress-deploy-to-github/">저장소 생성</a>)
                 </p>
                 <p>
                     <iframe src="http://player.vimeo.com/video/44383359?color=ffffff" width="100%" height="320" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/44383359">Install haroopress</a> from <a href="http://vimeo.com/rhio">rhiokim</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
@@ -122,31 +123,27 @@
             </div>
             <div class="span6">
                 <h2><span class="icon-wrench"></span> 설치</h2>
-                <h5>쉬운 설치</h5>
+                <!--h5>쉬운 설치</h5>
                 <pre>
 <code>$ curl http://haroopress.com/install.sh | sh
-</code></pre>
+</code></pre-->
 
                 <h5>소스를 이용한 설치</h5>
                 <pre>
 <code>$ <strong>git clone git@github.com:rhiokim/haroopress /path/to/yourblog.com</strong>
 $ <strong>cd /path/to/yourblog.com</strong>
 $ <strong>make init</strong>
-... node modules install global ...
-... git submodule init ...
-... build submodules ...</code></pre>
+... git submodule init ...</code></pre>
+
+하루프레스 초기화가 완료되면 자동으로 다음(아래) 단계를 진행합니다. 대부분 필수 설정 정보를 입력 받기 때문에 모두 입력하면 됩니다. 혹 실수로 잘못 입력했더라도 수정할 수 있기 때문에 다시 설치하지 않아도 됩니다.
 
                 <h5>하루프레스 환경(메타정보)설정</h5>
                 <pre>
-<code>========================================
-= configurate haroopress
-========================================
-haroo> Please! insert your blog title : 사이트 타이틀
-haroo> Please! insert your blog description : 사이트 설명
-haroo> Please! insert site url (e.g. http://site.com) : 사이트 주소
-haroo> Please! insert your name? : 이름
-(Create source/data/authors/[이름].markdown. Please edit)
-haroo> &lt;meta name="keyword" content="[value]" /&gt; : 메타 키워드
+<code>haroo> Insert your site title (*) : 사이트 타이틀
+haroo> Insert your site description (*) : 사이트 설명
+haroo> Insert site url (*) : 사이트 주소
+haroo> Insert you full name (*) : 이름
+...
 
 haroo> Save? [y/n] : y ¶</code></pre>
 
@@ -159,10 +156,8 @@ haroo> Save? [y/n] : y ¶</code></pre>
                 <h5>배포를 위한 Github 저장소 지정</h5>
 
                 <pre>
-<code>========================================
-= setup repository for deployment
-========================================
-haroo> Enter the read/write url for your repository: https://github.com/{account}/{account}.github.com.git
+<code>haroo> Enter the read/write url for your repository 
+e.g) git@github.com:{github-id}/{github-id}.github.com.git
 </code></pre>
                 <p>
                     자세한 설치법 : <a href="/post/haroopress-quick-guide">설치 퀵 가이드</a>, <a href="/post/harupeureseu-hwangyeongseoljeong-hagi/">수동 환경설정 가이드</a>
@@ -183,8 +178,7 @@ haroo> Enter the read/write url for your repository: https://github.com/{account
             <div class="span4">
                 <h2><span class="icon-edit"></span> 포스팅하기</h2>
                 <p>
-                    새로운 글을 작성하고 싶을 때는 <code>make new-post</code> 명령, 페이지 형식의 글을 작성하고 싶을 때는
-                    <code>make new-page</code> 명령을 실행하면 됩니다.
+                    하루프레스에서 새로운 콘텐츠를 생성하고 싶을땐 몇가지 명령어만 알면됩니다. 새로운 글 <code>make new-post</code>, 새로운 페이지 <code>make new-page</code>, 새로운 웹 슬라이드 <code>make new-slide</code> 를 실행하면 됩니다.
 
                     <h5>새로운 포스트</h5>
                     <pre><code>$ <strong>make new-post</strong>
@@ -208,32 +202,37 @@ haroo> 파일 및 디렉토리 생성 정보</code></pre>
 
                     <h5>정적 페이지 생성</h5>
                     <pre><code>$ <strong>make gen</strong>
-... 기존 데이터 초기화 ...
-... 정적 파일 생성 정보 ...</code></pre>
+... 생성 정보 ...</code></pre>
                </p>
                 <p>
                     퍼블리싱하기 전 작성한 기사나 페이지가 어떻게 표시되는지 확인하고 싶다면 간단한 명령어만으로 내 컴퓨터에서 바로 볼 수 있습니다.
                     <h5>배포 전 미리보기</h5>
                     <pre><code>$ <strong>make preview</strong>
 haroo> Start server at http://localhost:8081 ¶
-Show me the browser? [y/n] : </code></pre>
+Do you want check on the browser? [y(es)/n] : </code></pre>
+
+                    <h5>생성과 미리보기 동시에</h5>
+                    <pre><code>$ make && make preview</code></pre>
                </p>
             </div>
             <div class="span4">
                 <h2><span class="icon-github"></span> 퍼블리싱하기</h2>
                 <p>
                     하루프레스는 <code>make deploy</code> 라는 명령어로 설치 과정에서 지정한 Github 저장소로 퍼블리싱을 해줍니다.
+
+                    이 과정에서는 Github.com 에 <a href="http://localhost:8081/post/haroopress-deploy-to-github/">저장소 생성</a>이 필수입니다.
+
                     <h5>Github 저장소로 배포</h5>
                     <pre><code>$ <strong>make deploy</strong>
-=====================================
-= deploy to github
-=====================================
-haroo> Resources copy to Deploy directory
-haroo> git add .¶
 ... 배포 진행 과정 ...
 haroo> open http://yourblog.com ? [y/n]</code></pre>
                     하루프레스는 <a href="https://help.github.com/categories/20/articles" target="_blank">Github의 Pages 서비스</a>를
                     이용하여 사이트가 운영되기 때문에 생성된 정적 파일들을 설치 시 지정한 Github 저장소로 자동으로 배포를 진행합니다.
+
+                    <h5>배포 메세지 지정하기</h5>
+                    <pre><code>$ make deploy <strong>msg="커밋메세지"</strong>
+... 배포 진행 과정 ...
+haroo> open http://yourblog.com ? [y/n]</code></pre>
                </p>
             </div>
         </div>
@@ -251,16 +250,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
               </a>
               <div class="" style="margin:8px 5px;">
                   <h4>하루프레스 기본테마</h4>
-                  <div style="font-size:1.1em; font-weight: bold;"><span style=" color: red">free</span> / <span class="icon-shopping-cart"></span>1,372</div>
-                  <!--<hr style="margin: 8px 0;">-->
-                  <!--<div>-->
-                      <!--<div class="pull-left">-->
-                          <!--<img style="border-radius: 5px;" src="http://www.gravatar.com/avatar/0764d73c228492e36b339d8b6d7293ad?r=pg&amp;s=48.jpg&amp;d=identicon" alt="Rhio Kim" width="48" height="48">-->
-                      <!--</div>-->
-                      <!--<div style="padding-left: 53px;">-->
-                          <!--<a href="http://twitter.com/fantalon">@fantalon</a>-->
-                      <!--</div>-->
-                  <!--</div>-->
+                  <div style="font-size:1.1em; font-weight: bold;"><span style=" color: red">free</span><!-- / <span class="icon-shopping-cart"></span>1,372</div>-->
               </div>
             </li>
             <li class="span3">
@@ -269,7 +259,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
               </a>
               <div class="" style="margin:8px 5px;">
                   <h4>깨끗한 판타롱 테마</h4>
-                  <div style="font-size:1.1em; font-weight: bold;"><span style=" color: red"> free</span> / <span class="icon-shopping-cart"></span>89</div>
+                  <div style="font-size:1.1em; font-weight: bold;"><span style=" color: red"> free</span><!-- / <span class="icon-shopping-cart"></span>89</div>-->
               </div>
             </li>
             <li class="span3">
@@ -278,7 +268,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
               </a>
               <div class="" style="margin:8px 5px;">
                   <h4>다크 우드 테마</h4>
-                  <div style="font-size:1.1em; font-weight: bold;"><span style=" color: red"> free</span> / <span class="icon-shopping-cart"></span>632</div>
+                  <div style="font-size:1.1em; font-weight: bold;"><span style=" color: red"> free</span><!-- / <span class="icon-shopping-cart"></span>632</div>-->
               </div>
             </li>
             <li class="span3">
@@ -287,7 +277,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
               </a>
               <div class="" style="margin:8px 5px;">
                   <h4>밝은 우드 테마 테마</h4>
-                  <div style="font-size:1.1em; font-weight: bold;"><span style=" color: red"> free</span> / <span class="icon-shopping-cart"></span>297</div>
+                  <div style="font-size:1.1em; font-weight: bold;"><span style=" color: red"> free</span><!-- / <span class="icon-shopping-cart"></span>297</div>-->
               </div>
             </li>
         </ul>
@@ -334,7 +324,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
                   interval: 60000,
                   title: 'What do they say about haroopress',
                   subject: 'haroopress related tweets',
-                  height: 364,
+                  height: 200,
                   theme: {
                     shell: {
                       background: 'transparent',
@@ -369,7 +359,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
                   interval: 6000,
                   title: 'What do they say about haroopress',
                   subject: 'haroopress related tweets',
-                  height: 364,
+                  height: 200,
                   theme: {
                     shell: {
                       background: 'transparent',

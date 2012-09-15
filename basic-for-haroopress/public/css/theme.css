@@ -161,6 +161,7 @@ hr.soften {
 /* http://www.1stwebdesigner.com/css/customize-twitter-search-widgets/ */
 .span6 .twtr-widget { width: 100%; }
 .span6 .twtr-doc { width: 100% !important; }
+.span6 .twtr-timeline { height: 200px !important; }
 .twtr-widget {
     float: left;
     width: 380px;
