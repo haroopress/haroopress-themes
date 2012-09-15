@@ -1,3 +1,12 @@
+/**
+ * layout
+ */
+.page-main, .page-archive, .page-archives,
+.page-author, .page-authors, .page-category,
+.page-categories, .page-slides, .page-page {
+    margin-top: 70px;
+}
+
 body, p {
     font: 13px/1.5 'Open Sans',나눔고딕,NanumGothic,"맑은 고딕","Malgun Gothic",Apple-Gothic,Dotum,돋움,Arial,sans-serif; ;
 }
