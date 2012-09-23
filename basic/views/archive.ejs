@@ -49,6 +49,9 @@
                         <%- partial('plugins/google-plus', { config: config.plugins.google, archive: archive }) %>
                         <%- partial('plugins/twitter', { config: config, archive: archive }) %>
 
+                        <% var codeStyle = archive.head.advanced.codeStyle;
+                            codeStyle = (!codeStyle) ? 'github' : codeStyle ; %>
+                        <link href="/css/code/<%= codeStyle %>.css" rel="stylesheet">
                         <div class="markdown">
                             <%- archive.html %>
                         </div>

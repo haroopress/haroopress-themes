@@ -1,5 +1,5 @@
 
-.comment {
+article.comment {
     overflow: hidden;
     padding: 0 0 1em;
     border-bottom: 1px solid #ddd;
@@ -8,61 +8,61 @@
     margin:  18px 0 18px 0;
 }
 
-.comment-img {
+article .comment-img {
     float: left;
     margin-right: 33px;
     border-radius: 5px;
     overflow: hidden;
 }
 
-.comment-img img {
+article .comment-img img {
     display: block;
 }
 
-.comment-body {
+article .comment-body {
     overflow: hidden;
 }
 
-.comment .text {
+article.comment .text {
     padding: 10px;
     border: 1px solid #e5e5e5;
     border-radius: 5px;
     background: #fff;
 }
 
-.comment .text p:last-child {
+article.comment .text p:last-child {
     margin: 0;
 }
 
-.comment .attribution {
+article.comment .attribution {
     margin: 0.5em 0 0;
     color: #666;
 }
 
 /* Decoration */
 
-.comments,
-.comment {
+section.comments,
+article.comment {
     position: relative;
 }
 
-.comments:before,
-.comment:before,
-.comment .text:before {
+section.comments:before,
+article.comment:before,
+article.comment .text:before {
     content: "";
     position: absolute;
     top: 0;
     left: 65px;
 }
 
-.comments:before {
+section.comments:before {
     width: 3px;
     top: -20px;
     bottom: -20px;
     background: rgba(0,0,0,0.1);
 }
 
-.comment:before {
+article.comment:before {
     width: 9px;
     height: 9px;
     border: 3px solid #fff;
@@ -72,11 +72,11 @@
     background: #ccc;
 }
 
-.comment:hover:before {
+article.comment:hover:before {
     background: orange;
 }
 
-.comment .text:before {
+article.comment .text:before {
     top: 18px;
     left: 78px;
     width: 9px;
