@@ -8,7 +8,7 @@
                 다양한 테마, 웹 슬라이드, 플러그인, 마크다운 포맷, 데이터 변환 유틸<br>
             </p>
 
-            <p><strong>알림! :</strong> 하루프레스는 사용자 여러분의 피드백과 후원,기부를 기다립니다.</p>
+            <p><strong>알림! :</strong> 하루프레스는 사용자 여러분의 <a href="https://github.com/rhiokim/haroopress/issues" target="blank">피드백</a>과 후원,기부를 기다립니다.</p>
         </div>
         <!-- /container -->
         <ul class="quick-links">
@@ -33,11 +33,17 @@
 </header>
 
 <div class="container page-main">
-    <div class="row download-info">
-        <div class="span12">
+    <div class="row-fluid">
+        <div class="span8 download-info" style="text-align:right;">
             <a href="http://github.com/rhiokim/haroopress" class="btn btn-danger btn-large" onclick="_gaq.push(['_trackEvent', 'intro actions', 'GitHub Project', 'View project on GitHub']);"><span class="icon-eye-open"></span> View Haroopress on Github</a>
 
             <!--a href="https://github.com/rhiokim/haroopress/zipball/master" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'intro actions', 'Download', 'Download <%= config.meta.version %>']);"><span class="icon-download"></span> Download Haroopress <small>(v<%= config.meta.version %>)</small></a-->
+        </div>
+        <div class="span4 download-info">
+            <img class="pull-left author-img" src="http://www.gravatar.com/avatar/0764d73c228492e36b339d8b6d7293ad?r=pg&s=53.jpg&d=identicon"/>
+            <p>
+                하루프레스는 현재 버젼(0.8.x)에서는 Mac OS 에서만 안정적으로 지원합니다. 0.9.x 에서는 윈도우 지원, 웹 기반 GUI 관리도구 개발을 계획하고 있습니다.
+            </p>
         </div>
     </div>
 
@@ -212,7 +218,7 @@ haroo> Start server at http://localhost:8081 ¶
 Do you want check on the browser? [y(es)/n] : </code></pre>
 
                     <h5>생성과 미리보기 동시에</h5>
-                    <pre><code>$ make && make preview</code></pre>
+                    <pre><code>$ make gen && make preview</code></pre>
                </p>
             </div>
             <div class="span4">
@@ -245,7 +251,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
         <p class="marketing-byline">개발자스럽지 않는 테마는 여기에 나열하지 않았습니다. 너무 이쁘거나 너무 번잡한 테마는 IE6 에서만 지원합니다.</p>
         <ul class="thumbnails example-sites">
             <li class="span3">
-              <a class="thumbnail" href="http://soundready.fm/" target="_blank">
+              <a class="thumbnail" target="_blank">
                 <img src="img/themes/basic.png" alt="SoundReady.fm">
               </a>
               <div class="" style="margin:8px 5px;">
@@ -254,7 +260,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
               </div>
             </li>
             <li class="span3">
-              <a class="thumbnail" href="http://kippt.com/" target="_blank">
+              <a class="thumbnail" target="_blank">
                 <img src="img/themes/clean.png" alt="SoundReady.fm">
               </a>
               <div class="" style="margin:8px 5px;">
@@ -263,7 +269,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
               </div>
             </li>
             <li class="span3">
-              <a class="thumbnail" href="http://www.fleetio.com/" target="_blank">
+              <a class="thumbnail" target="_blank">
                 <img src="img/themes/wood-dark.png" alt="SoundReady.fm">
               </a>
               <div class="" style="margin:8px 5px;">
@@ -272,7 +278,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
               </div>
             </li>
             <li class="span3">
-              <a class="thumbnail" href="http://www.jshint.com/" target="_blank">
+              <a class="thumbnail" target="_blank">
                 <img src="img/themes/wood.png" alt="SoundReady.fm">
               </a>
               <div class="" style="margin:8px 5px;">
@@ -295,13 +301,13 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
                 </a>
             </li>
             <li class="span4">
-                <a class="thumbnail" href="http://soundready.fm/" target="_blank" title="노드 닌자그룹">
+                <a class="thumbnail" href="http://nodejs.kr/" target="_blank" title="노드 닌자그룹">
                     <img src="img/sites/nodejs.kr-320.png" alt="nodejs.kr">
                     <div class="caption">노드 닌자, 해커 그룹</div>
                 </a>
             </li>
             <li class="span4">
-              <a class="thumbnail" href="http://soundready.fm/" target="_blank" title="노드 닌자그룹">
+              <a class="thumbnail" href="http://haroopress.com/" target="_blank" title="하루프레스 공식 사이트">
                 <img src="img/sites/haroopress-320.png" alt="SoundReady.fm">
                   <div class="caption">하루프레스 공식 사이트</div>
               </a>
@@ -320,7 +326,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
                 new TWTR.Widget({
                   version: 2,
                   type: 'search',
-                  search: '#haroopress_refs',
+                  search: '#haroopress_ref',
                   interval: 60000,
                   title: 'What do they say about haroopress',
                   subject: 'haroopress related tweets',
@@ -397,6 +403,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
                         <li><span class="icon-plus"></span> 데이터 컨버터 (워드프레스, 블로거, 텀블러 등)</li>
                         <li><span class="icon-plus"></span> Heroku 배포와 Rsync 방식 배포 지원</li>
                         <li><span class="icon-plus"></span> 템플릿 엔진과 테마 기능 고도화</li>
+                        <li><span class="icon-plus"></span> 윈도우 지원</li>
                      </ul>
                 </p>
             </div>
