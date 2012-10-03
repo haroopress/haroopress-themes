@@ -21,10 +21,11 @@
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="/css/prettify.css" rel="stylesheet">
+    <!-- <link href="/css/prettify.css" rel="stylesheet"> -->
     <link href="/css/haroopress.css" rel="stylesheet">
-    <link href="/css/archives.css" rel="stylesheet">
-
+    <!-- <link href="/css/archives.css" rel="stylesheet"> -->
+    <link href="/css/markdown.css" rel="stylesheet">
+    
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <!--<link rel="apple-touch-icon" href="assets/ico/bootstrap-apple-57x57.png">-->
@@ -33,7 +34,6 @@
 
     <!-- Le javascript -->
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/prettify.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/jquery.jsonp.js"></script>
     <script src="/js/mustache.js"></script>
@@ -49,10 +49,6 @@
 
     <%- partial('layout/footer', config) %>
 
-    <script>
-        $('pre > code').parent().addClass('prettyprint linenums');
-        prettyPrint();
-    </script>
     <%- partial('plugins/google-analysis', config.analytics) %>
     </body>
 </html>
