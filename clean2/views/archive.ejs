@@ -39,15 +39,15 @@
                         <%- partial('plugins/google-plus', { config: config, archive: archive }) %>
                         <%- partial('plugins/twitter', { config: config, archive: archive }) %>
 
-                        <div class="markdown">
+                        <div class="markdown-wrapper">
                             <%- archive.html %>
                         </div>
+
+                        <hr />
+                        
                         <%- partial('plugins/prev-next', { prev: archive.prev, next: archive.next }) %>
-                        <div class="row">
-                            <div class="span8 disqus">
-                                <%- partial('plugins/disqus', config.plugins.disqus) %>
-                            </div>
-                        </div>
+                        
+                        <%- partial('plugins/disqus', config.plugins.disqus) %>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@
                 <%- partial('plugins/google-plus', { config: config.plugins.google, archive: archive }) %>
                 <%- partial('plugins/twitter', { config: config, archive: archive }) %>
 
-                <div class="markdown">
+                <div class="markdown-wrapper">
                     <%- archive.html %>
                 </div>
                 <%- partial('plugins/prev-next', { prev: archive.prev, next: archive.next }) %>

@@ -21,8 +21,10 @@
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
     <link href="/css/haroopress.css" rel="stylesheet">
-    <link href="/css/page.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
     <link href="/css/code/<%=config.defaultCodeStyle%>.css" rel="stylesheet">
 
     <!-- Le fav and touch icons -->
@@ -30,9 +32,8 @@
     <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
 
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/prettify.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/toc.js"></script>
+    <script src="/js/apps/toc.js"></script>
 </head>
 <body data-spy="scroll" data-target=".subnav" data-offset="50">
 
@@ -43,9 +44,6 @@
     <%- partial('layout/footer', config) %>
 
     <script>
-        $('pre > code').parent().addClass('prettyprint linenums');
-        prettyPrint();
-
         // fix sub nav on scroll
         var $win = $(window)
           , $nav = $('.subnav')
@@ -69,5 +67,6 @@
     </script>
     
     <%- partial('plugins/google-analysis', config.analytics) %>
+    
 </body>
 </html>
