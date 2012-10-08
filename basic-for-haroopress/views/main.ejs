@@ -1,7 +1,11 @@
-<%
-    var codeStyle = config.defaultCodeStyle;
-%>
-<link href="/css/code/<%=codeStyle%>.css" rel="stylesheet">
+
+<script src="/js/highlight.pack.js"></script>
+<script>
+hljs.tabReplace = '    ';
+hljs.initHighlightingOnLoad();
+</script>
+
+<link href="/css/code/solarized_dark.css" rel="stylesheet">
 
 <header class="intro-head">
     <div class="inner">
@@ -30,7 +34,7 @@
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </li>
             <li>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-text="자바스크립트 해커들을 위한 노드 기반의 정적 페이지 블로그 하루프레스" data-url="http://haroopress.github.com" data-via="haroopress">Tweet</a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-text="자바스크립트 해커들을 위한 노드 기반의 정적 페이지 블로그 하루프레스 #마크다운 #하루프레스" data-url="http://haroopress.com" data-via="haroopress">Tweet</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </li>
         </ul>
@@ -108,7 +112,7 @@
         <p class="marketing-byline">하루프레스 설치 방법에 대해서 소개합니다.</p>
     </div>
 
-    <div class="howto">
+    <div class="howto markdown-wrapper ">
         <div class="row">
             <div class="span6">
                 <h2><span class="icon-book"></span> 설치 요구사항</h2>
@@ -136,12 +140,12 @@
                 <h2><span class="icon-wrench"></span> 설치</h2>
                 <!--h5>쉬운 설치</h5>
                 <pre>
-<code>$ curl http://haroopress.com/install.sh | sh
+<code class="bash">$ curl http://haroopress.com/install.sh | sh
 </code></pre-->
 
                 <h5>소스를 이용한 설치</h5>
                 <pre>
-<code>$ <strong>git clone git@github.com:rhiokim/haroopress /path/to/yourblog.com</strong>
+<code class="bash">$ <strong>git clone git@github.com:rhiokim/haroopress /path/to/yourblog.com</strong>
 $ <strong>cd /path/to/yourblog.com</strong>
 $ <strong>make init</strong>
 ... git submodule init ...</code></pre>
@@ -150,10 +154,12 @@ $ <strong>make init</strong>
 
                 <h5>하루프레스 환경(메타정보)설정</h5>
                 <pre>
-<code>haroo> Insert your site title (*) : 사이트 타이틀
+<code class="bash">haroo> Insert your site title (*) : 사이트 타이틀
 haroo> Insert your site description (*) : 사이트 설명
 haroo> Insert site url (*) : 사이트 주소
 haroo> Insert you full name (*) : 이름
+haroo> Insert you gravatar emaill address (*) : 이메일
+haroo> Insert you site meta information (*) : 메타 정보
 ...
 
 haroo> Save? [y/n] : y ¶</code></pre>
@@ -167,7 +173,7 @@ haroo> Save? [y/n] : y ¶</code></pre>
                 <h5>배포를 위한 Github 저장소 지정</h5>
 
                 <pre>
-<code>haroo> Enter the read/write url for your repository 
+<code class="bash">haroo> Enter the read/write url for your repository 
 e.g) git@github.com:{github-id}/{github-id}.github.com.git
 </code></pre>
                 <p>
@@ -184,7 +190,7 @@ e.g) git@github.com:{github-id}/{github-id}.github.com.git
         <h1>간편한 사용법</h1>
         <p class="marketing-byline">포스팅(Posting), 생성(Generate), 퍼블리싱(Publishing).</p>
     </div>
-    <div class="howto">
+    <div class="howto markdown-wrapper ">
         <div class="row">
             <div class="span4">
                 <h2><span class="icon-edit"></span> 포스팅하기</h2>
@@ -192,17 +198,17 @@ e.g) git@github.com:{github-id}/{github-id}.github.com.git
                     하루프레스에서 새로운 콘텐츠를 생성하고 싶을땐 몇가지 명령어만 알면됩니다. 새로운 글 <code>make new-post</code>, 새로운 페이지 <code>make new-page</code>, 새로운 웹 슬라이드 <code>make new-slide</code> 를 실행하면 됩니다.
 
                     <h5>새로운 포스트</h5>
-                    <pre><code>$ <strong>make new-post</strong>
+                    <pre class="bash"><code>$ <strong>make new-post</strong>
 haroo> Input article title : 기사 제목 ¶
 haroo> Input article category : 카테고리 ¶
 haroo> Input article tag (e.g tag1, tag2, tag3) : 태그 ¶
 haroo> 파일 및 디렉토리 생성 정보</code></pre>
 
                     <h5>새로운 페이지</h5>
-                    <pre><code>$ <strong>make new-post</strong></code></pre>
+                    <pre class="bash"><code>$ <strong>make new-post</strong></code></pre>
 
                     <h5>새로운 웹슬라이드</h5>
-                    <pre><code>$ <strong>make new-slide</strong></code></pre>
+                    <pre class="bash"><code>$ <strong>make new-slide</strong></code></pre>
                </p>
             </div>
             <div class="span4">
@@ -212,18 +218,18 @@ haroo> 파일 및 디렉토리 생성 정보</code></pre>
                     <code>make gen</code> 명령어로 정적 페이지를 생성할 수 있습니다.
 
                     <h5>정적 페이지 생성</h5>
-                    <pre><code>$ <strong>make gen</strong>
+                    <pre class="bash"><code>$ <strong>make gen</strong>
 ... 생성 정보 ...</code></pre>
                </p>
                 <p>
                     퍼블리싱하기 전 작성한 기사나 페이지가 어떻게 표시되는지 확인하고 싶다면 간단한 명령어만으로 내 컴퓨터에서 바로 볼 수 있습니다.
                     <h5>배포 전 미리보기</h5>
-                    <pre><code>$ <strong>make preview</strong>
+                    <pre class="bash"><code>$ <strong>make preview</strong>
 haroo> Start server at http://localhost:8081 ¶
 Do you want check on the browser? [y(es)/n] : </code></pre>
 
                     <h5>생성과 미리보기 동시에</h5>
-                    <pre><code>$ make gen && make preview</code></pre>
+                    <pre class="bash"><code>$ make gen && make preview</code></pre>
                </p>
             </div>
             <div class="span4">
@@ -234,14 +240,14 @@ Do you want check on the browser? [y(es)/n] : </code></pre>
                     이 과정에서는 Github.com 에 <a href="http://localhost:8081/post/haroopress-deploy-to-github/">저장소 생성</a>이 필수입니다.
 
                     <h5>Github 저장소로 배포</h5>
-                    <pre><code>$ <strong>make deploy</strong>
+                    <pre class="bash"><code>$ <strong>make deploy</strong>
 ... 배포 진행 과정 ...
 haroo> open http://yourblog.com ? [y/n]</code></pre>
                     하루프레스는 <a href="https://help.github.com/categories/20/articles" target="_blank">Github의 Pages 서비스</a>를
                     이용하여 사이트가 운영되기 때문에 생성된 정적 파일들을 설치 시 지정한 Github 저장소로 자동으로 배포를 진행합니다.
 
                     <h5>배포 메세지 지정하기</h5>
-                    <pre><code>$ make deploy <strong>msg="커밋메세지"</strong>
+                    <pre class="bash"><code>$ make deploy <strong>msg="커밋메세지"</strong>
 ... 배포 진행 과정 ...
 haroo> open http://yourblog.com ? [y/n]</code></pre>
                </p>
