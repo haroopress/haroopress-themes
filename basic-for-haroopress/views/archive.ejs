@@ -1,3 +1,8 @@
+<%
+    var options = archive.head.advanced || {};
+    var codeStyle = options.codeStyle || config.defaultCodeStyle;
+%>
+<link href="/css/code/<%=codeStyle%>.css" rel="stylesheet">
 <div class="container page-archive">
     <div class="row">
         <div class="span3">
