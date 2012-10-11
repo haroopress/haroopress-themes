@@ -1,3 +1,8 @@
+<%
+    var codeStyle = config.defaultCodeStyle;
+%>
+<link href="/css/code/<%=codeStyle%>.css" rel="stylesheet">
+
 <div class="container">
     <div class="row">
         <div class="span3 side">
@@ -7,9 +12,10 @@
             <%- partial('plugins/github-repo', config.plugins.github) %>
         </div>
         <div class="span9 articles">
-            <% //for(var id in archives) {
-                for(var id = 0; id < dates.serialize.length; id++) {
-                var article = dates.serialize[id];
+            <%
+                var article, limit = config.pagenate < dates.serialize.length ? config.pagenate : dates.serialize.length;
+                for(var id = 0; id < limit; id++) {
+                    article = dates.serialize[id];
             %>
             <div class="row">
                 <div class="span9">
@@ -25,7 +31,7 @@
                             </h1>
                         </div>
                         <div class="markdown-wrapper">
-                            <%- article.html %>
+                            <%- article.cuthtml %>
                         </div>
                         <div class="meta clearfix">
                             <a class="cmt" href="/post/<%= article._file %>#disqus_thread" data-disqus-identifier="<%= id %>"></a>
