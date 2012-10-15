@@ -8,8 +8,8 @@
     <meta name="keywords" content="<%= config.meta.keywords.join(',') %>" />
     <meta name="generator" content="haroopress v<%= config.meta.version %>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<meta name="viewport" content="width=1274, user-scalable=no">-->
-    <link rel="stylesheet" href="../_asserts/themes/basic/styles/style.css">
+    <link rel="stylesheet" href="../@asserts/themes/<%=config.defaultSlideStyle%>/styles/style.css">
+    <link href="/css/code/<%=config.defaultCodeStyle%>.css" rel="stylesheet">
     <!--
         To apply styles to the certain slides
         use slide ID to get needed elements
@@ -46,7 +46,7 @@
         just remove “progress” element.
         -->
     <div class="progress"><div></div></div>
-    <script src="../_asserts/scripts/script.js"></script>
+    <script src="../@asserts/scripts/script.js"></script>
     <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
     <!-- Photos by John Carey — fiftyfootshadows.net -->
 </body>

@@ -9,7 +9,7 @@
                 <%- partial('plugins/google-plus', { config: config.plugins.google, archive: archive }) %>
                 <%- partial('plugins/twitter', { config: config, archive: archive }) %>
 
-                <div class="markdown">
+                <div class="markdown-wrapper">
                     <%- archive.html %>
                 </div>
                 <%- partial('plugins/prev-next', { prev: archive.prev, next: archive.next }) %>
@@ -29,9 +29,9 @@
                 </p>
                 <p>
                     <span class="info">name: <%= archive.author.head.name %></span>
-                    <span class="info">blog: <a href="<%= archive.head.author.blog %>" target="_blank"><%= archive.author.head.blog %></a></span>
-                    <span class="info">twitter: <a href="http://twitter.com/<%= archive.head.author.twitter %>" target="_blank">@<%= archive.author.head.twitter %></a></span>
-                    <span class="info">github: <a href="https://github.com/<%= archive.head.author.twitter %>" target="_blank"><%= archive.author.head.github %></a></span>
+                    <span class="info">blog: <a href="<%= archive.author.head.blog %>" target="_blank"><%= archive.author.head.blog %></a></span>
+                    <span class="info">twitter: <a href="http://twitter.com/<%= archive.author.head.twitter %>" target="_blank">@<%= archive.author.head.twitter %></a></span>
+                    <span class="info">github: <a href="https://github.com/<%= archive.author.head.twitter %>" target="_blank"><%= archive.author.head.github %></a></span>
                 </p>
                 <p>
                     <a href="https://twitter.com/<%= archive.author.head.twitter %>" class="twitter-follow-button" data-show-count="true">Follow @<%= archive.author.head.twitter %></a>
