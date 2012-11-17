@@ -51,7 +51,7 @@ hljs.initHighlightingOnLoad();
         <div class="span4 download-info">
             <img class="pull-left author-img" src="http://www.gravatar.com/avatar/0764d73c228492e36b339d8b6d7293ad?r=pg&s=53.jpg&d=identicon"/>
             <p>
-                <a href="http://haroopress.com/post/haroopress-v0-dot-9/">하루프레스 v0.9 버젼이 출시하였습니다.</a><br/> 하루프레스는 현재 버젼(0.8.x)에서는 Mac OS 에서만 안정적으로 지원합니다. 
+                <a href="http://haroopress.com/post/haroopress-v0-dot-9/">하루프레스 v0.9.1 버젼이 출시하였습니다.</a><br/> 하루프레스는 현재 버젼(0.8.x)에서는 Mac OS 에서만 안정적으로 지원합니다. 
             </p>
         </div>
     </div>
@@ -81,8 +81,8 @@ hljs.initHighlightingOnLoad();
                 <p>트위터 부트스트랩을 기반으로 테마 구조가 잡혀있어 개발자스러운 테마를 손 쉽게 적용할 수 있을 뿐아니라 직접 만들 수도 있습니다. (<a href="#theme">테마 목록</a>)</p>
             </div>
             <div class="span4">
-                <h2><span class="icon-check-empty"></span> 웹 슬라이드</h2>
-                <p>간단한 마크다운 문서가 멋진 웹 슬라이드로 재 탄생하게 됩니다. 뿐만아니라 언제 어디서든지 웹을 통한 멋진 프리젠테이션이 가능합니다. (<a href="/slides/hello-world/" target="_blank">예제</a>)</p>
+                <h2><span class="icon-check-empty"></span> 웹 슬라이드 <em class="label label-info"><strong>experiment</strong></em></h2>
+                <p>간단한 마크다운 문서가 멋진 웹 슬라이드로 재 탄생하게 됩니다. 뿐만아니라 언제 어디서든지 웹을 통한 멋진 프리젠테이션이 가능합니다. (<a href="/slides/hello-world/" target="_blank">예제</a> | <a href="#"><del>작성 가이드</del></a>)</p>
             </div>
             <div class="span4">
                 <h2><span class="icon-beaker"></span> 다양한 플러그인</h2>
@@ -105,15 +105,15 @@ hljs.initHighlightingOnLoad();
         </div>
         <div class="row bottom20">
             <div class="span4">
-                <h2><span class="icon-inbox"></span> 펜스 코드 블럭 <em class="label label-important"><strong>v0.9</strong></em></h2>
-                <p>개발자는 블로그 포스팅을 하다보면 필수적으로 들어가는 것이 짧은 코드 블럭입니. 마크다운에서는 구문강조가 적용된 예쁜 코드 블럭을 원하는 스타일로 꾸밀 수 있습니다.(<a href="#">소개(예정)</a>)</p>
+                <h2><span class="icon-inbox"></span> 펜스 코드 블럭 <em class="label label"><strong>v0.9</strong></em></h2>
+                <p>개발자는 블로그 포스팅을 하다보면 필수적으로 들어가는 것이 짧은 코드 블럭입니. 마크다운에서는 구문강조가 적용된 예쁜 코드 블럭을 원하는 스타일로 꾸밀 수 있습니다.(<a href="/post/fenced-code-block/">소개</a>)</p>
             </div>
             <div class="span4">
-                <h2><span class="icon-tasks"></span> 멀티 마크다운 지원 <em class="label label-important"><strong>v0.9</strong></em></h2>
+                <h2><span class="icon-tasks"></span> 멀티 마크다운 지원 <em class="label label"><strong>v0.9</strong></em></h2>
                 <p>전형적인 마크다운에 비해 향상된 마크다운을 일부 제공합니다. 테이블, 트리플 강조(Triple Emphasis), 자동 링크등을 제공합니다. (<a href="/post/haroopress-v0-dot-9/" target="_blank">참고</a>)</p>
             </div>
             <div class="span4">
-                <h2><span class="icon-magic"></span> 마크다운 플러그인 지원 <em class="label label-important"><strong>v0.9</strong></em></h2>
+                <h2><span class="icon-magic"></span> 마크다운 플러그인 지원 <em class="label label-important"><strong>v0.9.1</strong></em></h2>
                 <p>마크다운 플러그인 지원 <code>[plugin:value attribute]</code> 를 통해서 다양한 오픈 콘텐츠를 제공합니다. youtube, jsfiddle, tweet 를 간단한 문법으로 글에 포함할 수 있습니다. (<a href="/post/haroopress-v0-dot-9/#toc_74" target="_blank">참고</a>)</p>
             </div>
         </div>
@@ -353,8 +353,8 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
                   type: 'search',
                   search: '#haroopress_ref',
                   interval: 60000,
-                  title: 'What do they say about haroopress',
-                  subject: 'haroopress related tweets',
+                  title: '하루프레스 커뮤니티가 나누는 하루프레스에 관한 유용한 정보',
+                  subject: '하루프레스 레퍼런스 관련 트윗 (#haroopress_ref)',
                   height: 200,
                   theme: {
                     shell: {
@@ -388,8 +388,8 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
                   type: 'search',
                   search: 'haroopress -haroopress_ref OR 하루 프레스',
                   interval: 6000,
-                  title: 'What do they say about haroopress',
-                  subject: 'haroopress related tweets',
+                  title: '사용자들이 하루프레스에 대해서 무슨 이야기를 나눌까?',
+                  subject: '하루프레스(haroopress)와 관련된 모든 트윗',
                   height: 200,
                   theme: {
                     shell: {
