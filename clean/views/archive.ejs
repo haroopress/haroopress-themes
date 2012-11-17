@@ -17,7 +17,7 @@
                         <%- partial('plugins/google-plus', { config: config, archive: archive }) %>
                         <%- partial('plugins/twitter', { config: config, archive: archive }) %>
 
-                        <div class="markdown">
+                        <div class="markdown-wrapper">
                             <%- archive.html %>
                         </div>
                         <%- partial('plugins/prev-next', { prev: archive.prev, next: archive.next }) %>
@@ -41,9 +41,9 @@
                 </div>
                 <ul class="profile">
                     <li class="nickname"><%= archive.author.head.name %></li>
-                    <li class="blog"><a href="<%= archive.author.blog %>" target="_blank"><%= archive.author.head.blog %></a></li>
-                    <li class="twitter"><a href="http://twitter.com/<%= archive.author.twitter %>" target="_blank">@<%= archive.author.head.twitter %></a></li>
-                    <li class="github"><a href="https://github.com/<%= archive.author.twitter %>" target="_blank"><%= archive.author.head.github %></li>
+                    <li class="blog"><a href="<%= archive.author.head.blog %>" target="_blank"><%= archive.author.head.blog %></a></li>
+                    <li class="twitter"><a href="http://twitter.com/<%= archive.author.head.twitter %>" target="_blank">@<%= archive.author.head.twitter %></a></li>
+                    <li class="github"><a href="https://github.com/<%= archive.author.head.github %>" target="_blank"><%= archive.author.head.github %></li>
                 </ul>
      
                 <p>

@@ -1,0 +1,72 @@
+/**
+ * article body
+ */
+body {
+    background-color: #46483E;
+}
+
+*, p {
+    color: #D2D8BA;
+}
+
+.well {
+    background-color: #3F4138;
+}
+
+a {
+    color: #A8C904;
+}
+
+a:hover {
+    color: #A8C904;
+}
+
+.page-header {
+    border-bottom: #2C2E23;
+}
+
+hr {
+    border-top: 1px solid #383A30;
+    border-bottom: 1px solid #46493B;
+}
+
+.nav-list > li > a, .nav-list .nav-header {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+}
+
+/**
+ * 아티클 목록
+ */
+.page-archives .comment {
+    border-bottom: 1px solid #282B21;
+}
+.page-archives .comment .text {
+    border: 1px solid #282B21;
+    background: #393C32;
+}
+.page-archives .comment:before {
+    border: 3px solid #282B21;
+}
+.page-archives .comment .text:before {
+    border-color: #282B21;
+    background: #393C32;
+}​
+
+/**
+ * 마크다운 확장
+ */
+.markdown-wrapper a:hover {
+  text-shadow: 1px 1px 2px #445200;
+}
+
+.markdown-wrapper table tr {
+/*  border: 0;
+  border-top: 1px solid #CCC;*/
+  background-color: #4B4E40;
+ /* margin: 0;
+  padding: 0;*/
+}
+
+.markdown-wrapper table tr:nth-child(2n) {
+  background-color: #43463A;
+}

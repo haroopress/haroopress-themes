@@ -1,3 +1,8 @@
+<%
+    var codeStyle = config.defaultCodeStyle;
+%>
+<link href="/css/code/<%=codeStyle%>.css" rel="stylesheet">
+
 <div class="container page-main">
     <div class="row">
         <div class="span9 main">
@@ -13,7 +18,7 @@
                 </p>
                 <% if(article.head.important) { %><div class="pull-right bookmark"></div><% } %>
                 <h1><a href="/post/<%= article._file %>"><%= article.head.title %></a></h1>
-                <div class="markdown">
+                <div class="markdown-wrapper">
                     <%- article.cuthtml %>
                 </div>
                 <p class="pull-right">
