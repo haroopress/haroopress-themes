@@ -5,7 +5,7 @@
                 <% if(archive.head.important) { %><div class="pull-right bookmark"></div><% } %>
                 <h1><%= archive.head.title %></h1>
 
-                <%- partial('plugins/facebook', config.plugins.facebook) %>
+                <%- partial('plugins/facebook', { config: config, archive: archive }) %>
                 <%- partial('plugins/google-plus', { config: config.plugins.google, archive: archive }) %>
                 <%- partial('plugins/twitter', { config: config, archive: archive }) %>
 

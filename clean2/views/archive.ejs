@@ -35,7 +35,7 @@
                             <h1><%= archive.head.title %></h1>
                         </div>
 
-                        <%- partial('plugins/facebook', config.plugins.facebook) %>
+                        <%- partial('plugins/facebook', { config: config, archive: archive }) %>
                         <%- partial('plugins/google-plus', { config: config, archive: archive }) %>
                         <%- partial('plugins/twitter', { config: config, archive: archive }) %>
 
