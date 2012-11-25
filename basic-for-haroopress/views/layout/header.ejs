@@ -7,30 +7,30 @@
             <span class="icon-bar"></span>
           </a>
 
-          <a class="pull-right" href="/rss.xml"><span class="icon-rss"></span></a>
+          <a class="pull-right" href="/rss.xml" onclick="_gaq.push(['_trackEvent', 'header', 'rss'])"><span class="icon-rss"></span></a>
           <%
             var twitter = config.plugins.twitter;
             if(twitter.display && twitter.user) { %>
-            <a class="pull-right" href="http://twitter.com/<%= config.plugins.twitter.user %>" target="_blank"><span class="icon-twitter"></span></a>
+            <a class="pull-right" href="http://twitter.com/<%= config.plugins.twitter.user %>" target="_blank" onclick="_gaq.push(['_trackEvent', 'header', 'twitter'])"><span class="icon-twitter"></span></a>
           <% } %>
 
           <div class="nav-collapse">
             <ul class="nav">
               <li>
-                <a href="/">Home</a>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'header', 'home'])">Home</a>
               </li>
               <li>
-                <a href="/archives">Archives</a>
+                <a href="/archives" onclick="_gaq.push(['_trackEvent', 'header', 'archives'])">Archives</a>
               </li>
               <li>
-                <a href="/slides">Slides</a>
+                <a href="/slides" onclick="_gaq.push(['_trackEvent', 'header', 'slides'])">Slides</a>
               </li>
                 <% for(var id in pages) {
                     var page = pages[id];
                     if(page.head.status == 'draft') { continue; }
                 %>
                     <li>
-                        <a href="<%= page._path %>"><%= page.head.title %></a>
+                      <a href="<%= page._path %>" onclick="_gqa.push(['_trackEvent', 'header', '<%= page._path %>'])"><%= page.head.title %></a>
                     </li>
                 <% } %>
             </ul>
