@@ -30,7 +30,7 @@
                     if(page.head.status == 'draft') { continue; }
                 %>
                     <li>
-                      <a href="<%= page._path %>" onclick="_gqa.push(['_trackEvent', 'header', '<%= page._path %>'])"><%= page.head.title %></a>
+                      <a href="<%= page._path %>" onclick="_gaq.push(['_trackEvent', 'header', '<%= page._path %>'])"><%= page.head.title %></a>
                     </li>
                 <% } %>
             </ul>
