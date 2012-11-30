@@ -17,7 +17,7 @@ hljs.initHighlightingOnLoad();
                 다양한 테마, 웹 슬라이드, 플러그인, 마크다운 포맷, 데이터 변환 유틸<br>
             </p>
 
-            <p><strong>알림! :</strong> 하루프레스는 사용자 여러분의 <a href="https://github.com/rhiokim/haroopress/issues" target="blank">피드백</a>과 후원,기부를 기다립니다.</p>
+            <p><strong>알림! :</strong> 하루프레스는 사용자 여러분의 <a href="https://github.com/rhiokim/haroopress/issues" target="blank" onclick="_gaq.push['_trackEvent', 'intro', 'header', 'feedback']">피드백</a>과 후원,기부를 기다립니다.</p>
         </div>
         <!-- /container -->
         <ul class="quick-links">
@@ -44,14 +44,14 @@ hljs.initHighlightingOnLoad();
 <div class="container page-main">
     <div class="row-fluid">
         <div class="span8 download-info" style="text-align:right;">
-            <a href="http://github.com/rhiokim/haroopress" class="btn btn-danger btn-large" onclick="_gaq.push(['_trackEvent', 'intro actions', 'GitHub Project', 'View project on GitHub']);"><span class="icon-eye-open"></span> View Haroopress on Github</a>
+            <a href="http://github.com/rhiokim/haroopress" class="btn btn-danger btn-large" onclick="_gaq.push(['_trackEvent', 'intro', 'GitHub Project', 'View project on GitHub']);"><span class="icon-eye-open"></span> View Haroopress on Github</a>
 
             <!--a href="https://github.com/rhiokim/haroopress/zipball/master" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'intro actions', 'Download', 'Download <%= config.meta.version %>']);"><span class="icon-download"></span> Download Haroopress <small>(v<%= config.meta.version %>)</small></a-->
         </div>
         <div class="span4 download-info">
             <img class="pull-left author-img" src="http://www.gravatar.com/avatar/0764d73c228492e36b339d8b6d7293ad?r=pg&s=53.jpg&d=identicon"/>
             <p>
-                <a href="http://haroopress.com/post/haroopress-v0-dot-9/">하루프레스 v0.9.1 버젼이 출시하였습니다.</a><br/> 하루프레스는 현재 버젼(0.8.x)에서는 Mac OS 에서만 안정적으로 지원합니다. 
+                <a href="http://haroopress.com/post/haroopress-v0-dot-9/" onclick="_gaq.push(['_trackEvent', 'intro', 'content', 'release-message'])">하루프레스 v0.9.1 버젼이 출시하였습니다.</a><br/> 하루프레스는 현재 버젼(0.8.x)에서는 Mac OS 에서만 안정적으로 지원합니다. 
             </p>
         </div>
     </div>
@@ -61,7 +61,7 @@ hljs.initHighlightingOnLoad();
             <div class="span4">
                 <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
                 <h2><span class="icon-bolt"></span> 5분 설치 블로그</h2>
-                <p>복잡한 설치형 블로그는 이제 그만! 설치하는데 걸리는 시간 5분!! <br/><code>git clone git@github.com:rhiokim/haroopress.git</code> <br/>(<a href="/post/haroopress-install-guide-movie">5분만에 설치하는 하루프레스 동영상</a>)</p>
+                <p>복잡한 설치형 블로그는 이제 그만! 설치하는데 걸리는 시간 5분!! <br/><code>git clone https://github.com/rhiokim/haroopress.git</code> <br/>(<a href="/post/haroopress-install-guide-movie">5분만에 설치하는 하루프레스 동영상</a>)</p>
             </div>
             <div class="span4">
                 <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
@@ -144,7 +144,7 @@ hljs.initHighlightingOnLoad();
                     <br/><br/><a href="http://git-scm.org/" target="_blank"><img src="/img/intro/git.png" /> </a><a href="http://git-scm.org/" target="_blank"><img src="/img/intro/github.png" /></a>
                 </p>
                 <p>
-                    또한 <strong><u>하루프레스가 생성하는 정적 페이지를 웹에서 확인하기 위해서는 Github.com 에 본인의 계정과 공개(Public)된 저장소</u></strong>가 존재해야 합니다. (<a href="/post/haroopress-deploy-to-github/">저장소 생성</a>)
+                    또한 <strong><u>하루프레스가 생성하는 정적 페이지를 웹에서 확인하기 위해서는 Github.com 에 본인의 계정과 공개(Publish)된 저장소</u></strong>가 존재해야 합니다. (<a href="/post/haroopress-deploy-to-github/">저장소 생성</a>)
                 </p>
                 <p>
                     <iframe src="http://player.vimeo.com/video/44383359?color=ffffff" width="100%" height="320" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/44383359">Install haroopress</a> from <a href="http://vimeo.com/rhio">rhiokim</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
@@ -159,7 +159,7 @@ hljs.initHighlightingOnLoad();
 
                 <h5>소스를 이용한 설치</h5>
                 <pre>
-<code class="bash">$ <strong>git clone git@github.com:rhiokim/haroopress /path/to/yourblog.com</strong>
+<code class="bash">$ <strong>git clone https://github.com/rhiokim/haroopress.git /path/to/yourblog.com</strong>
 $ <strong>cd /path/to/yourblog.com</strong>
 $ <strong>make init</strong>
 ... git submodule init ...</code></pre>
@@ -386,7 +386,7 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
                 new TWTR.Widget({
                   version: 2,
                   type: 'search',
-                  search: 'haroopress -haroopress_ref OR 하루 프레스',
+                  search: 'haroopress -haroopress_ref OR 하루프레스',
                   interval: 6000,
                   title: '사용자들이 하루프레스에 대해서 무슨 이야기를 나눌까?',
                   subject: '하루프레스(haroopress)와 관련된 모든 트윗',
