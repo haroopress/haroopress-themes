@@ -16,7 +16,7 @@
 
                 <div class="row">
                     <div class="span8 disqus">
-                        <%- partial('plugins/disqus', config.plugins.disqus) %>
+                        <%- partial('plugins/disqus', { archive: archive, disqus: config.plugins.disqus } ) %>
                     </div>
                 </div>
             </div>

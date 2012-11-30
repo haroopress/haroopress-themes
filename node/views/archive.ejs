@@ -55,7 +55,7 @@
                         <hr />
                         <%- partial('plugins/prev-next', { prev: archive.prev, next: archive.next }) %>
 
-                        <%- partial('plugins/disqus', config.plugins.disqus) %>
+                        <%- partial('plugins/disqus', { archive: archive, disqus: config.plugins.disqus } ) %>
                     </div>
                 </div>
             </div>
