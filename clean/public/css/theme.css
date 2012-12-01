@@ -67,9 +67,6 @@ header.overview {
 .fbbd {
 	width: 100%;
 }
-.fb_edge_widget_with_comment {
-	float: right;
-}
 .navbar-inner {
 	background: url(../img/bg-header.gif) repeat 0 0;
 }
@@ -430,4 +427,9 @@ footer .backtotop {
 	footer .backtotop {
 		margin-right: 0;
 	}
+}
+
+.social-area {
+  width: 100px;
+  margin-left: 10px;
 }

@@ -35,9 +35,11 @@
                             <h1><%= archive.head.title %></h1>
                         </div>
 
-                        <%- partial('plugins/facebook', { config: config, archive: archive }) %>
-                        <%- partial('plugins/google-plus', { config: config, archive: archive }) %>
-                        <%- partial('plugins/twitter', { config: config, archive: archive }) %>
+                        <div class="pull-right social-area">
+                            <%- partial('plugins/twitter', { config: config, archive: archive }) %>
+                            <%- partial('plugins/google-plus', { config: config.plugins.google, archive: archive }) %>
+                            <%- partial('plugins/facebook', { config: config, archive: archive }) %>
+                        </div>
 
                         <div class="markdown-wrapper">
                             <%- archive.html %>

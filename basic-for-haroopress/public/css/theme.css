@@ -292,3 +292,8 @@ hr.soften {
     .twtr-ft { display: none; }
 
 /* --- twitter search widget ------------------------------------------*/
+
+.social-area {
+  width: 100px;
+  margin-left: 10px;
+}

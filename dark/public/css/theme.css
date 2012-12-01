@@ -334,3 +334,8 @@ a, a:hover, #author a, .contributors a {
         display: none;
     }
 }
+
+.social-area {
+  width: 100px;
+  margin-left: 10px;
+}

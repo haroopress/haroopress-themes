@@ -345,3 +345,14 @@ footer {
 ._tweets hr {
     margin: 3px 0;
 }
+
+.navbar span.icon-twitter, .navbar span.icon-rss {
+    margin-top: 12px;
+    margin-left: 5px;
+    font-size: 24px;
+}
+
+.social-area {
+  width: 100px;
+  margin-left: 10px;
+}

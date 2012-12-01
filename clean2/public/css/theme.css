@@ -72,9 +72,9 @@ header.overview {
 .fbbd {
 	width: 100%;
 }
-.fb_edge_widget_with_comment {
-	float: right;
-}
+/*.fb_edge_widget_with_comment {*/
+	/*float: right;*/
+/*}*/
 .navbar {
 	border-top: 4px solid #b2b2b2;
 }
@@ -432,4 +432,10 @@ footer .backtotop {
 }
 .footer a {
 	text-decoration: none;
+}
+
+
+.social-area {
+  width: 100px;
+  margin-left: 10px;
 }
