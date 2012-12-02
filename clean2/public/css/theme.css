@@ -288,8 +288,8 @@ header.overview {
 .articles .meta .cmt {
 	float: left;
 	padding: 5px 1px 3px;
-	margin: 0;
-	line-height: 1.5;
+	/*margin: 0;*/
+	/*line-height: 1.5;*/
 	font: 14px/1.5 'Rokkitt',serif;
 	text-decoration: none;
 }
