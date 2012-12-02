@@ -8,11 +8,11 @@
             <span class="icon-bar"></span>
           </a>
 
-          <a class="pull-right" href="/rss.xml"><img src="/img/buttons/rss.png" /></a>
+          <a class="pull-right" href="/rss.xml"><span class="icon-rss"></span></a>
           <%
             var twitter = config.plugins.twitter;
             if(twitter.display && twitter.user) { %>
-            <a class="pull-right" href="http://twitter.com/<%= config.plugins.twitter.user %>" target="_blank"><img src="/img/buttons/twitter.png" /></a>
+            <a class="pull-right" href="http://twitter.com/<%= config.plugins.twitter.user %>" target="_blank"><span class="icon-twitter"></span></a>
           <% } %>
 
           <div class="nav-collapse">

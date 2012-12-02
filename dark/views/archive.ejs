@@ -5,9 +5,11 @@
                 <% if(archive.head.important) { %><div class="pull-right bookmark"></div><% } %>
                 <h1><%= archive.head.title %></h1>
 
-                <%- partial('plugins/facebook', config.plugins.facebook) %>
-                <%- partial('plugins/google-plus', { config: config.plugins.google, archive: archive }) %>
-                <%- partial('plugins/twitter', { config: config, archive: archive }) %>
+                <div class="pull-right social-area">
+                    <%- partial('plugins/twitter', { config: config, archive: archive }) %>
+                    <%- partial('plugins/google-plus', { config: config.plugins.google, archive: archive }) %>
+                    <%- partial('plugins/facebook', { config: config, archive: archive }) %>
+                </div>
 
                 <div class="markdown-wrapper">
                     <%- archive.html %>
@@ -16,7 +18,7 @@
 
                 <div class="row">
                     <div class="span8 disqus">
-                        <%- partial('plugins/disqus', config.plugins.disqus) %>
+                        <%- partial('plugins/disqus', { archive: archive, disqus: config.plugins.disqus } ) %>
                     </div>
                 </div>
             </div>

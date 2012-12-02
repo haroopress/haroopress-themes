@@ -14,7 +14,7 @@
                     <p>
                         <strong><%= archive.author.head.name %></strong><br/>
                         blog: <a href="<%= archive.author.head.blog %>" target="_blank"><%= archive.author.head.blog %></a><br/>
-                        twitter: <a href="http://twitter.com/#!/<%= archive.author.head.twitter %>" target="_blank">@<%= archive.author.head.twitter %></a><br/>
+                        twitter: <a href="http://twitter.com//<%= archive.author.head.twitter %>" target="_blank">@<%= archive.author.head.twitter %></a><br/>
                         github: <a href="https://github.com/<%= archive.author.head.twitter %>" target="_blank"><%= archive.author.head.github %></a>
                     </p>
                     <p>
@@ -45,16 +45,19 @@
                             <h1><%= archive.head.title %></h1>
                         </div>
 
-                        <%- partial('plugins/facebook', config.plugins.facebook) %>
-                        <%- partial('plugins/google-plus', { config: config.plugins.google, archive: archive }) %>
-                        <%- partial('plugins/twitter', { config: config, archive: archive }) %>
+                        <div class="pull-right social-area">
+                            <%- partial('plugins/twitter', { config: config, archive: archive }) %>
+                            <%- partial('plugins/google-plus', { config: config.plugins.google, archive: archive }) %>
+                            <%- partial('plugins/facebook', { config: config, archive: archive }) %>
+                        </div>
 
                         <div class="markdown-wrapper">
                             <%- archive.html %>
                         </div>
                         <hr />
                         <%- partial('plugins/prev-next', { prev: archive.prev, next: archive.next }) %>
-                        <%- partial('plugins/disqus', config.plugins.disqus) %>
+
+                        <%- partial('plugins/disqus', { archive: archive, disqus: config.plugins.disqus } ) %>
                     </div>
                 </div>
             </div>

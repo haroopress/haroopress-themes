@@ -5,7 +5,7 @@ hljs.tabReplace = '    ';
 hljs.initHighlightingOnLoad();
 </script>
 
-<link href="/css/code/solarized_dark.css" rel="stylesheet">
+<link href="/css/code/solarized_light.css" rel="stylesheet">
 
 <header class="intro-head">
     <div class="inner">
@@ -17,7 +17,7 @@ hljs.initHighlightingOnLoad();
                 다양한 테마, 웹 슬라이드, 플러그인, 마크다운 포맷, 데이터 변환 유틸<br>
             </p>
 
-            <p><strong>알림! :</strong> 하루프레스는 사용자 여러분의 <a href="https://github.com/rhiokim/haroopress/issues" target="blank">피드백</a>과 후원,기부를 기다립니다.</p>
+            <p><strong>알림! :</strong> 하루프레스는 사용자 여러분의 <a href="https://github.com/rhiokim/haroopress/issues" target="blank" onclick="_gaq.push['_trackEvent', 'intro', 'header', 'feedback']">피드백</a>과 후원,기부를 기다립니다.</p>
         </div>
         <!-- /container -->
         <ul class="quick-links">
@@ -30,7 +30,7 @@ hljs.initHighlightingOnLoad();
       allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
             </li>
             <li>
-                <a href="https://twitter.com/#!/haroopress" class="twitter-follow-button" data-show-count="true">Follow @haroopress</a>
+                <a href="https://twitter.com//haroopress" class="twitter-follow-button" data-show-count="true">Follow @haroopress</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </li>
             <li>
@@ -44,14 +44,14 @@ hljs.initHighlightingOnLoad();
 <div class="container page-main">
     <div class="row-fluid">
         <div class="span8 download-info" style="text-align:right;">
-            <a href="http://github.com/rhiokim/haroopress" class="btn btn-danger btn-large" onclick="_gaq.push(['_trackEvent', 'intro actions', 'GitHub Project', 'View project on GitHub']);"><span class="icon-eye-open"></span> View Haroopress on Github</a>
+            <a href="http://github.com/rhiokim/haroopress" class="btn btn-danger btn-large" onclick="_gaq.push(['_trackEvent', 'intro', 'GitHub Project', 'View project on GitHub']);"><span class="icon-eye-open"></span> View Haroopress on Github</a>
 
             <!--a href="https://github.com/rhiokim/haroopress/zipball/master" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'intro actions', 'Download', 'Download <%= config.meta.version %>']);"><span class="icon-download"></span> Download Haroopress <small>(v<%= config.meta.version %>)</small></a-->
         </div>
         <div class="span4 download-info">
             <img class="pull-left author-img" src="http://www.gravatar.com/avatar/0764d73c228492e36b339d8b6d7293ad?r=pg&s=53.jpg&d=identicon"/>
             <p>
-                <a href="http://haroopress.com/post/haroopress-v0-dot-9/">하루프레스 v0.9 버젼이 출시하였습니다.</a><br/> 하루프레스는 현재 버젼(0.8.x)에서는 Mac OS 에서만 안정적으로 지원합니다. 
+                <a href="http://haroopress.com/post/haroopress-v0-dot-9/" onclick="_gaq.push(['_trackEvent', 'intro', 'content', 'release-message'])">하루프레스 v0.9.1 버젼이 출시하였습니다.</a><br/> 하루프레스는 현재 버젼(0.8.x)에서는 Mac OS 에서만 안정적으로 지원합니다. 
             </p>
         </div>
     </div>
@@ -61,7 +61,7 @@ hljs.initHighlightingOnLoad();
             <div class="span4">
                 <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
                 <h2><span class="icon-bolt"></span> 5분 설치 블로그</h2>
-                <p>복잡한 설치형 블로그는 이제 그만! 설치하는데 걸리는 시간 5분!! <br/><code>git clone git@github.com:rhiokim/haroopress.git</code> <br/>(<a href="/post/haroopress-install-guide-movie">5분만에 설치하는 하루프레스 동영상</a>)</p>
+                <p>복잡한 설치형 블로그는 이제 그만! 설치하는데 걸리는 시간 5분!! <br/><code>git clone https://github.com/rhiokim/haroopress.git</code> <br/>(<a href="/post/haroopress-install-guide-movie">5분만에 설치하는 하루프레스 동영상</a>)</p>
             </div>
             <div class="span4">
                 <!--<img class="bs-icon" src="assets/img/glyphicons/glyphicons_042_group.png">-->
@@ -81,8 +81,8 @@ hljs.initHighlightingOnLoad();
                 <p>트위터 부트스트랩을 기반으로 테마 구조가 잡혀있어 개발자스러운 테마를 손 쉽게 적용할 수 있을 뿐아니라 직접 만들 수도 있습니다. (<a href="#theme">테마 목록</a>)</p>
             </div>
             <div class="span4">
-                <h2><span class="icon-check-empty"></span> 웹 슬라이드</h2>
-                <p>간단한 마크다운 문서가 멋진 웹 슬라이드로 재 탄생하게 됩니다. 뿐만아니라 언제 어디서든지 웹을 통한 멋진 프리젠테이션이 가능합니다. (<a href="/slides/hello-world/" target="_blank">예제</a>)</p>
+                <h2><span class="icon-check-empty"></span> 웹 슬라이드 <em class="label label-info"><strong>experiment</strong></em></h2>
+                <p>간단한 마크다운 문서가 멋진 웹 슬라이드로 재 탄생하게 됩니다. 뿐만아니라 언제 어디서든지 웹을 통한 멋진 프리젠테이션이 가능합니다. (<a href="/slides/hello-world/" target="_blank">예제</a> | <a href="#"><del>작성 가이드</del></a>)</p>
             </div>
             <div class="span4">
                 <h2><span class="icon-beaker"></span> 다양한 플러그인</h2>
@@ -105,16 +105,16 @@ hljs.initHighlightingOnLoad();
         </div>
         <div class="row bottom20">
             <div class="span4">
-                <h2><span class="icon-inbox"></span> 펜스 코드 블럭 <em class="label label-important"><strong>v0.9</strong></em></h2>
-                <p>개발자는 블로그 포스팅을 하다보면 필수적으로 들어가는 것이 짧은 코드 블럭입니. 마크다운에서는 구문강조가 적용된 예쁜 코드 블럭을 원하는 스타일로 꾸밀 수 있습니다.(<a href="#">소개(예정)</a>)</p>
+                <h2><span class="icon-inbox"></span> 펜스 코드 블럭 <em class="label label"><strong>v0.9</strong></em></h2>
+                <p>개발자는 블로그 포스팅을 하다보면 필수적으로 들어가는 것이 짧은 코드 블럭입니. 마크다운에서는 구문강조가 적용된 예쁜 코드 블럭을 원하는 스타일로 꾸밀 수 있습니다.(<a href="/post/fenced-code-block/">소개</a>)</p>
             </div>
             <div class="span4">
-                <h2><span class="icon-tasks"></span> 멀티 마크다운 지원 <em class="label label-important"><strong>v0.9</strong></em></h2>
+                <h2><span class="icon-tasks"></span> 멀티 마크다운 지원 <em class="label label"><strong>v0.9</strong></em></h2>
                 <p>전형적인 마크다운에 비해 향상된 마크다운을 일부 제공합니다. 테이블, 트리플 강조(Triple Emphasis), 자동 링크등을 제공합니다. (<a href="/post/haroopress-v0-dot-9/" target="_blank">참고</a>)</p>
             </div>
             <div class="span4">
-                <h2><span class="icon-magic"></span> 마크다운 플러그인 지원 <em class="label label-important"><strong>v0.9</strong></em></h2>
-                <p>마크다운 플러그인 지원 `[plugin:value attribute]` 를 통해서 다양한 오픈 콘텐츠를 제공합니다. youtube, jsfiddle, tweet 를 간단한 문법으로 글에 포함할 수 있습니다. (<a href="/post/haroopress-v0-dot-9/#toc_74" target="_blank">참고</a>)</p>
+                <h2><span class="icon-magic"></span> 마크다운 플러그인 지원 <em class="label label-important"><strong>v0.9.1</strong></em></h2>
+                <p>마크다운 플러그인 지원 <code>[plugin:value attribute]</code> 를 통해서 다양한 오픈 콘텐츠를 제공합니다. youtube, jsfiddle, tweet 를 간단한 문법으로 글에 포함할 수 있습니다. (<a href="/post/haroopress-v0-dot-9/#toc_74" target="_blank">참고</a>)</p>
             </div>
         </div>
     </div>
@@ -130,21 +130,25 @@ hljs.initHighlightingOnLoad();
         <div class="row">
             <div class="span6">
                 <h2><span class="icon-book"></span> 설치 요구사항</h2>
-                <p>
-                    하루프레스는 노드를 기반하여 모든 소스코드가 자바스크립트로 작성되었습니다. 하루프레스를 이용하기 위해서는 노드 최신버젼을 설치해 주어야 합니다.
+                <div class="alert alert-block">
+                    <strong>설치 시 필독 사항!</strong><br />
+                    하루프레스를 설치하기 위해서 필요한 몇가지 <a href="/post/haroopress-install-requirements/">요구사항</a>을 미리 확인해보세요.
+                </div>
 
-                    <a href="http://nodejs.org" target="_blank">노드 공식 사이트</a>를 통해 설치방법과 레퍼런스를 얻을 수 있습니다. 하루프레스를 사용하시려면 <a href="https://github.com/creationix/nvm" target="_blank"><strong>nvm</strong></a> 와 같은 노드 버젼 메니저를 사용하기를 권장합니다. 
-                    <blockquote>하루프레스는 노드 <code>v0.6.12</code> 버젼으로 개발되어졌고 <code>v0.8.8</code> 까지 테스트 되었습니다.</blockquote>
+                <p>
+                    <strong>하루프레스</strong>는 노드를 기반하여 모든 소스코드가 자바스크립트로 작성되었습니다. 하루프레스를 이용하기 위해서는 노드 최신버젼을 설치해 주어야 합니다.
+
+                    <a href="http://nodejs.org" target="_blank">노드 공식 사이트</a>를 통해 설치방법과 레퍼런스를 얻을 수 있습니다. 하루프레스를 사용하시려면 <a href="https://github.com/creationix/nvm" target="_blank"><strong>nvm</strong></a> 와 같은 노드 버젼 메니저를 사용하기를 권장합니다. <br/>
                     <a href="http://nodejs.org/" target="_blank"><img src="/img/intro/nodejs.png" /></a>
                 </p>
 
                 <p>
-                    하루프레스는 총 <a href="http://localhost:8081/post/opensource-with-haroopress">20여가지의 오픈소스와 2가지의 오픈 스펙</a>을 기반으로 개발되었고 대부분의 오픈소스가 모두 Github.com 을 통해 관리 되어지고 있어 하루프레스는 이것들을 서브모듈로 사용하고 있습니다. 
+                    <strong>하루프레스</strong>는 총 <a href="/post/opensource-with-haroopress">20여가지의 오픈소스와 2가지의 오픈 스펙</a>을 기반으로 개발되었고 대부분의 오픈소스가 모두 Github.com 을 통해 관리 되어지고 있어 하루프레스는 이것들을 서브모듈로 사용하고 있습니다. 
 
                     <br/><br/><a href="http://git-scm.org/" target="_blank"><img src="/img/intro/git.png" /> </a><a href="http://git-scm.org/" target="_blank"><img src="/img/intro/github.png" /></a>
                 </p>
                 <p>
-                    또한 <strong><u>하루프레스가 생성하는 정적 페이지를 웹에서 확인하기 위해서는 Github.com 에 본인의 계정과 공개(Public)된 저장소</u></strong>가 존재해야 합니다. (<a href="http://localhost:8081/post/haroopress-deploy-to-github/">저장소 생성</a>)
+                    또한 <strong><u>하루프레스가 생성하는 정적 페이지를 웹에서 확인하기 위해서는 Github.com 에 본인의 계정과 공개(Publish)된 저장소</u></strong>가 존재해야 합니다. (<a href="/post/haroopress-deploy-to-github/">저장소 생성</a>)
                 </p>
                 <p>
                     <iframe src="http://player.vimeo.com/video/44383359?color=ffffff" width="100%" height="320" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/44383359">Install haroopress</a> from <a href="http://vimeo.com/rhio">rhiokim</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
@@ -159,7 +163,7 @@ hljs.initHighlightingOnLoad();
 
                 <h5>소스를 이용한 설치</h5>
                 <pre>
-<code class="bash">$ <strong>git clone git@github.com:rhiokim/haroopress /path/to/yourblog.com</strong>
+<code class="bash">$ <strong>git clone https://github.com/rhiokim/haroopress.git /path/to/yourblog.com</strong>
 $ <strong>cd /path/to/yourblog.com</strong>
 $ <strong>make init</strong>
 ... git submodule init ...</code></pre>
@@ -353,8 +357,8 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
                   type: 'search',
                   search: '#haroopress_ref',
                   interval: 60000,
-                  title: 'What do they say about haroopress',
-                  subject: 'haroopress related tweets',
+                  title: '하루프레스 커뮤니티가 나누는 하루프레스에 관한 유용한 정보',
+                  subject: '하루프레스 레퍼런스 관련 트윗 (#haroopress_ref)',
                   height: 200,
                   theme: {
                     shell: {
@@ -386,10 +390,10 @@ haroo> open http://yourblog.com ? [y/n]</code></pre>
                 new TWTR.Widget({
                   version: 2,
                   type: 'search',
-                  search: 'haroopress -haroopress_ref OR 하루 프레스',
+                  search: 'haroopress -haroopress_ref OR 하루프레스',
                   interval: 6000,
-                  title: 'What do they say about haroopress',
-                  subject: 'haroopress related tweets',
+                  title: '사용자들이 하루프레스에 대해서 무슨 이야기를 나눌까?',
+                  subject: '하루프레스(haroopress)와 관련된 모든 트윗',
                   height: 200,
                   theme: {
                     shell: {
