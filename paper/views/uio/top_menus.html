@@ -1,0 +1,18 @@
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/archives">Archives</a>
+              </li>
+              <li>
+                <a href="/slides">Slides</a>
+              </li>
+              {{#pages.models}}
+              <li>
+                  <a href="{{attributes._path}}">{{attributes.title}}</a>
+              </li>
+              {{/pages.models}}
+            </ul>
+          </div>
